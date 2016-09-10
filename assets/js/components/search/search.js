@@ -1,21 +1,20 @@
 var search = {
     templateUrl: '/js/components/search/search.html',
-    controller: function(carService) {
+    controller: ['$http', function($http) {
         var self = this;
 
         this.searchedCars = [];
+        this.cars = [];       
 
-        this.cars = [];
-        carService.getCars().then(function(response) {
+        getCars().then(function(response) {
             self.cars = response.data;
-            console.log(response);
         });
 
         this.search = function() {
             // Filter from all cars list.
             var filteredCars = self.cars.filter(function(car) { 
                 return car;
-            })
+            });
 
             // Map car model into image-grid representation.
             this.searchedCars = filteredCars.map(function(car) {
@@ -92,7 +91,16 @@ var search = {
             { id: 2, name: '5' },
             { id: 3, name: '6+' }
         ];
-    }
+
+        function getCars() {
+            // TODO: use carService.getCars instead, but resolve module dependencies first
+            var config = {
+                params: {},
+                headers : {'Accept' : 'application/json'}
+            };
+            return $http.get('/api/car', config);
+        }
+    }]
 };
 
 angular.module('skynda.search', ['skynda.range-slider', 'skynda.btn-group', 'skynda.image-grid'])
