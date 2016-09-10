@@ -44,10 +44,11 @@ var NotificationController = {
     var logo = require("fs").readFileSync("/home/deploy/skynda.me/api/controllers/e_mail_images/skynda_logo.png");
     var banner = require("fs").readFileSync("/home/deploy/skynda.me/api/controllers/e_mail_images/skynda_banner2.jpg");
 
-    htmlEmail
+    htmlEmail = htmlEmail
       .replace('{brand}', brand)
       .replace('{modelname}', modelname)
       .replace('{price}', price);
+
     transporter.sendMail({
       from: 'checkout@skynda.me',
       to: recipient,
@@ -66,8 +67,7 @@ var NotificationController = {
       text: 'Your Car is on it’s Way'
     });
     transporter.close();
-
-    res.send('done');
+    res.send('done' +'recipient'+ recipient + 'brand'+ brand+' price ' +price + ' modelname '+ modelname);
   }
 };
 
