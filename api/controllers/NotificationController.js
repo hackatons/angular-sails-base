@@ -42,12 +42,12 @@ var NotificationController = {
       attachments: [
         {
           filename: 'skynda_logo.png',
-          path: '/home/deploy/skynda.me/api/controllers/e_mail_images/',
+          path: '/home/deploy/skynda.me/api/controllers/e_mail_images',
           cid: 'skynda_logo'
         },
         {
           filename: 'skynda_banner2.jpg',
-          path: '/home/deploy/skynda.me/api/controllers/e_mail_images/',
+          path: '/home/deploy/skynda.me/api/controllers/e_mail_images',
           cid: 'skynda_banner2'
         }
       ],
