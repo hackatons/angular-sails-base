@@ -6,6 +6,22 @@
  */
 
 module.exports = {
-	
+  getBybrandOrModel: function (req, res) {
+    var term = req.param('term');
+
+    Car.find({
+        or: [
+          { brand: {like:'%'+term+'%'}},
+          { model: {like:'%'+term+'%'} }
+        ]
+      })
+      .then(function(cars){
+        res.json(cars);
+      })
+      .catch(function (err){
+        res.json(err);
+      });
+    res.json('');
+  }
 };
 

@@ -1,7 +1,7 @@
 
 (function () {
 
-  angular.module('application').service('carService', function ($scope, $http) {
+  angular.module('application').service('carService', function ($http) {
       var carEndpoint = '/api/car';
 
       this.getCars = function (params){
@@ -14,10 +14,14 @@
       };
 
       this.getCarByModelOrBrand = function (searchTerm){
-        var params = {
-          where : '{"or":["brand":{"startsWith":"'+searchTerm+'"},"model":{"startsWith":"'+searchTerm+'"}]}'
+        var config = {
+          params: {
+            term : searchTerm
+          },
+          headers : {'Accept' : 'application/json'}
         };
-        return this.getCars(params);
+
+        return $http.get(carEndpoint+'/by-brand-or-model', config);
       }
     }
   );

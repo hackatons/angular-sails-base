@@ -4,28 +4,8 @@
 (function () {
   var carEndpoint = '/api/car'; // TODO: use service
 
-  // TODO: to dummy service
-  var car1 = {
-    id: '85eada83-b14a-4cca-9ea3-b1217dec2778',
-    brand: 'Accord 2.0 i-VTEC 114kW',
-    img: 'http://img6.auto24.ee/auto24/320/224/86087224.jpg',
-    description: 'TODO'
-  };
-  var car2 = {
-    id: '85eada83-b14a-4cca-9ea3-b1217dec2778',
-    brand: 'Accord 2.0 i-VTEC 114kW',
-    img: 'http://img6.auto24.ee/auto24/320/224/86087224.jpg',
-    description: 'TODO'
-  };
-  var car3 = {
-    id: '85eada83-b14a-4cca-9ea3-b1217dec2778',
-    brand: 'Accord 2.0 i-VTEC 114kW',
-    img: 'http://img6.auto24.ee/auto24/320/224/86087224.jpg',
-    description: 'TODO'
-  };
-
-angular.module('application').controller('carDetailsController', ["$scope", "$http", "$stateParams",
- function ($scope, $http, $stateParams) {
+angular.module('application').controller('carDetailsController', ["$scope", "$http", "$stateParams","$timeout",
+ function ($scope, $http, $stateParams, $timeout) {
     var selectedCarId = "85eada83-b14a-4cca-9ea3-b1217dec2778";
     selectedCarId = $stateParams.id;
 
@@ -46,13 +26,94 @@ angular.module('application').controller('carDetailsController', ["$scope", "$ht
 
     /////////////////////////////
 
-    $scope.similarcars = [car1, car2, car3];
+    $scope.similarcars = [];
+   $scope.slides = [];
 
     function init() {
       getCars({id: selectedCarId}).success(function (car) {
         car.images = typeof car.images === "string" ? car.images.split(",") : [];
         $scope.car = car;
+
+        $scope.slides.length = 0;
+        for (var i = 0; i < car.images.length; i++) {
+          $scope.slides.push({image: car.images[i], brand: car.brand});
+        }
+
+        /*
+         THIS ACTIVATES A SLIDER ON THE TOP LOL!
+         */
+
+        $timeout(function () {
+          if ($(".slider-banner-container").length>0) {
+            $(".tp-bannertimer").show();
+            $('.slider-banner-container .slider-banner').show().revolution({
+              delay:10000,
+              startwidth:1140,
+              startheight:520,
+
+              navigationArrows:"solo",
+
+              navigationStyle: "round",
+              navigationHAlign:"center",
+              navigationVAlign:"bottom",
+              navigationHOffset:0,
+              navigationVOffset:20,
+
+              soloArrowLeftHalign:"left",
+              soloArrowLeftValign:"center",
+              soloArrowLeftHOffset:20,
+              soloArrowLeftVOffset:0,
+
+              soloArrowRightHalign:"right",
+              soloArrowRightValign:"center",
+              soloArrowRightHOffset:20,
+              soloArrowRightVOffset:0,
+
+              fullWidth:"on",
+
+              spinner:"spinner0",
+
+              stopLoop:"off",
+              stopAfterLoops:-1,
+              stopAtSlide:-1,
+              onHoverStop: "off",
+
+              shuffle:"off",
+
+              autoHeight:"off",
+              forceFullWidth:"off",
+
+              hideThumbsOnMobile:"off",
+              hideNavDelayOnMobile:1500,
+              hideBulletsOnMobile:"off",
+              hideArrowsOnMobile:"off",
+              hideThumbsUnderResolution:0,
+
+              hideSliderAtLimit:0,
+              hideCaptionAtLimit:0,
+              hideAllCaptionAtLilmit:0,
+              startWithSlide:0
+            });
+          }
+        });
+
+        /*
+         END OF SLIDER ACTIVATION LOL!
+         */
+      }).error(function () {
+        $state.go('error404');
       })
+        .then(getCars().success(function (cars) {
+          $scope.similarcars.length = 0;
+          for (var i = 0; i < cars.length; i++) {
+            $scope.similarcars.push({
+              id: cars[i].id,
+              brand: cars[i].brand,
+              img: cars[i].images.split(',')[0],
+              description: 'TODO'
+            });
+          }
+        }));
     }
 
     function getCars(params) {
