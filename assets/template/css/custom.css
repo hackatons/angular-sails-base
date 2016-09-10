@@ -13,6 +13,13 @@ File Description: Place here your custom CSS styles
   color: #119DFD;
 }
 
+/*
+===========================
+===========================
+===========================
+   Car Details
+  */
+
 .sk-details__icon {
   margin: 0 auto;
 }
@@ -58,7 +65,29 @@ File Description: Place here your custom CSS styles
   margin-top: 50px;
 }
 
-/* Homepage */
+.carousel-caption {
+  bottom: -20px;
+}
+
+.carousel .item {
+  width: 100%; /*slider width*/
+  max-height: 250px; /*slider height*/
+}
+
+.carousel .item img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%; /*img width*/
+  height: 250px;
+}
+
+/*
+===========================
+===========================
+===========================
+   Homepage
+  */
 .sk-hero{
   padding-top:0;
   padding-bottom: 0;
@@ -80,3 +109,6 @@ File Description: Place here your custom CSS styles
   color: #fff;
   position: absolute;
 }
+
+
+
