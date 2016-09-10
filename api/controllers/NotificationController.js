@@ -44,9 +44,9 @@ var NotificationController = {
     var logo = require("fs").readFileSync("/home/deploy/skynda.me/api/controllers/e_mail_images/skynda_logo.png");
     var banner = require("fs").readFileSync("/home/deploy/skynda.me/api/controllers/e_mail_images/skynda_banner2.jpg");
 
-    htmlEmail = htmlEmail.replaceAll(new RegExp('{brand}', 'g'), brand);
-    htmlEmail = htmlEmail.replaceAll(new RegExp('{modelname}', 'g'), modelname)
-    htmlEmail = htmlEmail.replaceAll(new RegExp('{price}', 'g'), price);
+    htmlEmail = htmlEmail.replace(new RegExp('{brand}', 'g'), brand);
+    htmlEmail = htmlEmail.replace(new RegExp('{modelname}', 'g'), modelname)
+    htmlEmail = htmlEmail.replace(new RegExp('{price}', 'g'), price);
 
     transporter.sendMail({
       from: 'checkout@skynda.me',
