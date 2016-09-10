@@ -1,12 +1,11 @@
 /**
  * Created by jevgenir on 10.09.2016.
  */
-
-angular.module('application').controller('carDetailsController', function ($scope) {(function () {
+(function () {
   var carEndpoint = '/api/car'; // TODO: use service
 
-  angular.module('application').controller('carDetailsController', ["$scope", "$http", "$stateParams",
-    function ($scope, $http, $stateParams) {
+angular.module('application').controller('carDetailsController', ["$scope", "$http", "$stateParams",
+ function ($scope, $http, $stateParams) {
     var selectedCarId = "85eada83-b14a-4cca-9ea3-b1217dec2778";
     selectedCarId = $stateParams.id;
 
@@ -55,5 +54,6 @@ angular.module('application').controller('carDetailsController', function ($scop
       //
     };
   }
-  ]);
+]);
 })();
+
