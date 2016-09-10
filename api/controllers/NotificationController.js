@@ -66,7 +66,7 @@ var NotificationController = {
       text: 'Your Car is on it’s Way'
     });
     transporter.close();
-    res.send('done' +'recipient'+ recipient + 'brand'+ brand+' price ' +price + ' modelname '+ modelname);
+    res.send('done ->' +' recipient:'+ recipient + ' brand:'+ brand+' price:' +price + ' modelname:'+ modelname);
   }
 };
 
