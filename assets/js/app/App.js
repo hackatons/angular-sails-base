@@ -22,7 +22,7 @@ legislatorApp.config(function ($stateProvider, $urlRouterProvider, $locationProv
       templateUrl: '/templates/login.html'
     })
     .state('car-details', {
-      url: '/car-details',
+      url: '/car-details/:id',
       templateUrl: '/templates/carDetails.html'
     })
     .state('search', {
