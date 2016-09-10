@@ -4,8 +4,8 @@
 (function () {
   var carEndpoint = '/api/car'; // TODO: use service
 
-angular.module('application').controller('carDetailsController', ["$scope", "$http", "$stateParams",
- function ($scope, $http, $stateParams) {
+angular.module('application').controller('carDetailsController', ["$scope", "$http", "$stateParams","$state",
+ function ($scope, $http, $stateParams, $state) {
     var selectedCarId = "85eada83-b14a-4cca-9ea3-b1217dec2778";
     selectedCarId = $stateParams.id;
 
@@ -30,7 +30,9 @@ angular.module('application').controller('carDetailsController', ["$scope", "$ht
       getCars({id: selectedCarId}).success(function (car) {
         car.images = typeof car.images === "string" ? car.images.split(",") : [];
         $scope.car = car;
-      })
+      }).error(function () {
+        $state.go('error404');
+      });
     }
 
     function getCars(params) {
