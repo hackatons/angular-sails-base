@@ -2,13 +2,16 @@
 angular.module('application').component('checkout', {
     templateUrl: '/js/components/checkout/checkout.html',
     controller: function ($scope, $element, $attrs) {
-        console.log('checkout component initialized');
 
         $scope.changeCheckoutTab = function() {
             $scope.leaseTab = !$scope.leaseTab;
         };
 
 
+
+        /*
+        * jQuery used because was most familiar
+        * */
         var originalHeight = 0;
         function fixDiv() {
             var $cache = $('#scroller');
