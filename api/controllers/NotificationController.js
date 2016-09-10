@@ -31,15 +31,26 @@ var NotificationController = {
    * @param {Object} res
    */
   notifyOrder: function (req, res) {
+    var recipient = req.param('recipient');
+    var brand = req.param('brand');
+    var price = req.param('price');
+    var modelname = req.param('modelname');
+
+    console.log(recipient,brand,price,modelname);
+
     var nodemailer = require('nodemailer');
     var transporter = nodemailer.createTransport();
 
     var logo = require("fs").readFileSync("/home/deploy/skynda.me/api/controllers/e_mail_images/skynda_logo.png");
     var banner = require("fs").readFileSync("/home/deploy/skynda.me/api/controllers/e_mail_images/skynda_banner2.jpg");
 
+    htmlEmail = htmlEmail.replace(new RegExp('{brand}', 'g'), brand);
+    htmlEmail = htmlEmail.replace(new RegExp('{modelname}', 'g'), modelname)
+    htmlEmail = htmlEmail.replace(new RegExp('{price}', 'g'), price);
+
     transporter.sendMail({
       from: 'checkout@skynda.me',
-      to: 'ing.edwardyrc@gmail.com',
+      to: recipient,
       subject: 'Your car is on it’s Way',
       html: htmlEmail,
       attachments: [
@@ -55,8 +66,7 @@ var NotificationController = {
       text: 'Your Car is on it’s Way'
     });
     transporter.close();
-
-    res.send('done');
+    res.send('done ->' +' recipient:'+ recipient + ' brand:'+ brand+' price:' +price + ' modelname:'+ modelname);
   }
 };
 
@@ -147,33 +157,33 @@ var htmlEmail =
                                   <tr>\
                                     <td width="100%" align="left" style="font-size: 15px; line-height: 22px; font-family:helvetica, Arial, sans-serif; color:#5A5B5C;">\
                                     </br>\
-                                  Hi #First Name#\
+                                  Hi Karl\
                                   </br></br>\
-                              Congratulations, you have chosen well! #YYYY Brand and Model Name 3.0 (225 kW)# is almost ready and can’t wait to drive with you where ever you need to go.\
+                              Congratulations, you have chosen well! {brand} Brand and Model Name {modelname} is almost ready and can’t wait to drive with you where ever you need to go.\
                               </br></br>\
-                          The price we agreed on: #00 000.00euromärk#\
+                          The price we agreed on: {price}\
                           </br>\
-                        You also chose additional services in the sum of: #000.00eur#\
+                        You also chose additional services in the sum of: 30.00eur\
                         </br></br>\
                     New owner:\
                     </br>\
-                  #Name Surname#\
+                  Karl Anton\
                   </br>\
-                #Billing Address#\
+                Keevise 6\
                 </br>\
-              #Mobile phone number#\
+              34907865\
               </br>\
-            #E-mail#\
+            karl.anton@live.com\
             </br></br>\
           <b><font style="text-decoration: none; color: #019BFF">What happens next?</font>\
           </b></br>\
-      You should make a transfer to EE900540119022 in the sum of #00 000.00eur# at your earliest convenience, and definitely before your chosen delivery time.\
+      You should make a transfer to EE900540119022 in the sum of {price}eur at your earliest convenience, and definitely before your chosen delivery time.\
       </br></br>\
   We will deliver your new car:\
   </br>\
-#delivery address#\
+Keevise 6\
 </br>\
-#delivery time#\
+8:00 pm\
 </br></br>\
 Enjoy your new ride!\
   </br>\
