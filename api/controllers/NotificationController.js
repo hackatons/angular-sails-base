@@ -42,13 +42,11 @@ var NotificationController = {
       attachments: [
         {
           filename: 'skynda_logo.png',
-          path: '/home/deploy/skynda.me/api/controllers/e_mail_images/',
-          cid: 'skynda_logo'
+          path: '/home/deploy/skynda.me/api/controllers/e_mail_images/'
         },
         {
           filename: 'skynda_banner2.jpg',
-          path: '/home/deploy/skynda.me/api/controllers/e_mail_images/',
-          cid: 'skynda_banner2'
+          path: '/home/deploy/skynda.me/api/controllers/e_mail_images/'
         }
       ],
       text: 'Your Car is on it’s Way'
