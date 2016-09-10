@@ -4,31 +4,25 @@ var imageGrid = {
     // @ - string binding
     // & - callback binding
     bindings: {
-        options: '<'
+        values: '<'
     },
     templateUrl: '/js/components/image-grid/image-grid.html',
-    controller: function() {
-        this.options = [
-            { 
-                title: 'YO YO', 
-                description: 'lorem ipsum qqweqwe adw awd awd ad ad aw a awdawda dawa',
-                src: 'http://www.rhaein.com/funnystuff/images/random/random235.jpg',
-                href: 'http://www.edaville.com/dino-land'                
-            },
-            { 
-                title: 'YO YO 2', 
-                description: 'lorem ipsum qqweqwe adw awd awd ad ad aw a awdawda dawa',
-                src: 'http://www.rhaein.com/funnystuff/images/random/random235.jpg',
-                href: 'http://www.edaville.com/dino-land'                
-            },
-            { 
-                title: 'YO YO 3', 
-                description: 'lorem ipsum qqweqwe adw awd awd ad ad aw a awdawda dawa',
-                src: 'http://www.rhaein.com/funnystuff/images/random/random235.jpg',
-                href: 'http://www.edaville.com/dino-land'                 
+    controller: function($scope) {
+        var $ctrl = this;        
+        $scope.$watch('$ctrl.values', function() {
+            $ctrl.rows = [];
+            var splitInto = 3;
+            var row;
+            for (var i = 0; i < $ctrl.values.length; i++) {
+                if (i % splitInto === 0) {
+                    row = [];
+                    $ctrl.rows.push(row);
+                }
+                row.push($ctrl.values[i]);
             }
-        ];
+        });
     }
 };
 
-angular.module('skynda.image-grid', ['skynda.info-image']).component('imageGrid', imageGrid);
+angular.module('skynda.image-grid', ['skynda.info-image'])
+       .component('imageGrid', imageGrid);

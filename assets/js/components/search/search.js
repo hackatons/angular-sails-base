@@ -1,8 +1,30 @@
 var search = {
     templateUrl: '/js/components/search/search.html',
-    controller: function($http) {
+    controller: function(carService) {
+        var self = this;
+
+        this.searchedCars = [];
+
+        this.cars = [];
+        carService.getCars().then(function(response) {
+            self.cars = response.data;
+            console.log(response);
+        });
+
         this.search = function() {
-            
+            // Filter from all cars list.
+            var filteredCars = self.cars.filter(function(car) { 
+                return car;
+            })
+
+            // Map car model into image-grid representation.
+            this.searchedCars = filteredCars.map(function(car) {
+                return {
+                    title: car.brand,
+                    description: car.descriptionBrand,
+                    src: car.images.split(',')[0]                    
+                };
+            });
         };
 
         this.brands = [
@@ -73,5 +95,5 @@ var search = {
     }
 };
 
-angular.module('skynda.search', ['skynda.range-slider', 'skynda.btn-group'])
+angular.module('skynda.search', ['skynda.range-slider', 'skynda.btn-group', 'skynda.image-grid'])
        .component('search', search);
