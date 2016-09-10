@@ -2,19 +2,53 @@
 
   <sk-navbar></sk-navbar>
 
-  <info-image
-    src="'http://www.telegraph.co.uk/content/dam/motoring2/2015/12/03/porsche-panamera-front-1-xlarge-xlarge_trans++5yQLQqeH37t50SCyM4-zeBU--41c5Cba04Sh5SZbNZ8.jpg'"
-    href="'www.google.com'">
-    <h2 style="font-size: 2.4em; font-weight: bolder; color: whitesmoke">{{car.brand}}</h2>
 
-    <div class="container">
-      Bacon ipsum dolor amet corned beef short ribs shoulder sirloin strip steak swine short loin.
-      Fatback capicola porchetta, cow corned beef rump prosciutto sausage kielbasa shankle picanha.
-      Ham hock hamburger kielbasa pancetta swine venison. T-bone sausage venison kevin chuck
-      tenderloin picanha turducken biltong strip steak cupim frankfurter meatloaf turkey.
-      Hamburger andouille prosciutto flank bacon salami. Swine ground round doner corned beef pork ribeye.
+  <!-- banner start -->
+  <!-- ================ -->
+  <div class="banner">
+    <div class="slideshow">
+      <div class="slider-banner-container">
+        <div class="slider-banner">
+          <ul>
+            <li data-transition="random" data-slotamount="7" data-masterspeed="500" data-saveperformance="on"
+                ng-repeat="slide in slides"
+                data-title="Buy a car">
+
+              <!-- main image -->
+              <img ng-src="{{slide.image}}"  alt="slidebg1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+              <div class="tp-caption default_bg large sfr tp-resizeme"
+                   data-x="0"
+                   data-y="70"
+                   data-speed="600"
+                   data-start="1200"
+                   data-end="9400"
+                   data-endspeed="600"> {{slide.brand}}
+              </div>
+            </li>
+          </ul>
+          <div class="tp-bannertimer tp-bottom"></div>
+        </div>
+      </div>
     </div>
-  </info-image>
+  </div>
+
+
+
+
+  <!--<info-image-->
+    <!--src="'http://www.telegraph.co.uk/content/dam/motoring2/2015/12/03/porsche-panamera-front-1-xlarge-xlarge_trans++5yQLQqeH37t50SCyM4-zeBU&#45;&#45;41c5Cba04Sh5SZbNZ8.jpg'"-->
+    <!--href="">-->
+    <!--<h2 style="font-size: 2.4em; font-weight: bolder; color: whitesmoke">{{car.brand}}</h2>-->
+
+    <!--<div class="container">-->
+      <!--Bacon ipsum dolor amet corned beef short ribs shoulder sirloin strip steak swine short loin.-->
+      <!--Fatback capicola porchetta, cow corned beef rump prosciutto sausage kielbasa shankle picanha.-->
+      <!--Ham hock hamburger kielbasa pancetta swine venison. T-bone sausage venison kevin chuck-->
+      <!--tenderloin picanha turducken biltong strip steak cupim frankfurter meatloaf turkey.-->
+      <!--Hamburger andouille prosciutto flank bacon salami. Swine ground round doner corned beef pork ribeye.-->
+    <!--</div>-->
+  <!--</info-image>-->
 
   <div class="container">
 
