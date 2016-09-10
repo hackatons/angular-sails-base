@@ -26,10 +26,9 @@ angular.module('application').controller('carDetailsController', ["$scope", "$ht
 
     /////////////////////////////
 
-    $scope.similarcars = [];
+    $scope.similarcars = [car1, car2, car3];
 
     function init() {
-      $scope.slides = [];
       getCars({id: selectedCarId}).success(function (car) {
         car.images = typeof car.images === "string" ? car.images.split(",") : [];
         $scope.car = car;
@@ -100,6 +99,8 @@ angular.module('application').controller('carDetailsController', ["$scope", "$ht
         /*
          END OF SLIDER ACTIVATION LOL!
          */
+      }).error(function () {
+        $state.go('error404');
       })
         .then(getCars().success(function (cars) {
           $scope.similarcars.length = 0;

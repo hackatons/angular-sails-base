@@ -29,6 +29,10 @@ legislatorApp.config(function ($stateProvider, $urlRouterProvider, $locationProv
     .state('search', {
       url: '/search',
       component: 'search'
+    })
+    .state('error404', {
+      url: '/error404',
+      templateUrl: '/templates/error404.html'
     });
 
   $urlRouterProvider.otherwise('/');
