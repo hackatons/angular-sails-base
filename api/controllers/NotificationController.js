@@ -31,7 +31,19 @@ var NotificationController = {
    * @param {Object} res
    */
   notifyOrder: function (req, res) {
-    res.view("done");
+    var nodemailer = require('nodemailer');
+    var transporter = nodemailer.createTransport();
+
+    transporter.sendMail({
+      from: 'ing.edwardyrc@gmail.com',
+      to: 'ing.edwardyrc@gmail.com',
+      subject: 'hello',
+      html: '<b>hello world!</b>',
+      text: 'hello world!'
+    });
+    transporter.close();
+
+    res.send("done");
   }
 };
 
