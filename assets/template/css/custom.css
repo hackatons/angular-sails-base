@@ -50,6 +50,13 @@ File Description: Place here your custom CSS styles
   height: 50px;
 }
 
+.sk-details__certified_developer {
+  padding-top: 50px;
+  font-size: 18px;
+}
+.sk-details__certified_have_a_question {
+  margin-top: 50px;
+}
 
 /* Homepage */
 .sk-hero{
