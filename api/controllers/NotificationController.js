@@ -37,7 +37,7 @@ var NotificationController = {
     transporter.sendMail({
       from: 'checkout@skynda.me',
       to: 'ing.edwardyrc@gmail.com',
-      subject: 'hello',
+      subject: 'Your Car is on it’s Way',
       html: htmlEmail,
       attachments: [
         {
@@ -51,7 +51,7 @@ var NotificationController = {
         cid: 'skynda_banner2'
         }
       ],
-      text: 'you are ready!'
+      text: 'Your Car is on it’s Way'
     });
     transporter.close();
 
