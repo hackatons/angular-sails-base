@@ -1,0 +1,13 @@
+<div class="info-image">
+    <a class="thumbnail" ng-href="{{$ctrl.href}}">
+        <img ng-src="{{$ctrl.src}}">                
+    </a>
+
+    <!-- Partially transparent background layer -->
+    <div class="info-image__info-panel-bg">
+    </div>
+
+    <div class="info-image__info-panel">
+        <ng-transclude></ng-transclude>
+    </div>
+</div>

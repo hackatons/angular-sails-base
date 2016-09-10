@@ -31,4 +31,4 @@ var imageGrid = {
     }
 };
 
-angular.module('skynda.image-grid', []).component('imageGrid', imageGrid);
+angular.module('skynda.image-grid', ['skynda.info-image']).component('imageGrid', imageGrid);
