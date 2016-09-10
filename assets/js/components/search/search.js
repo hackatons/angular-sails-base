@@ -1,6 +1,10 @@
 var search = {
     templateUrl: '/js/components/search/search.html',
     controller: function($http) {
+        this.search = function() {
+            
+        };
+
         this.brands = [
             { id: -1, name: 'All' },
             { id: 0, name: 'BMW' },

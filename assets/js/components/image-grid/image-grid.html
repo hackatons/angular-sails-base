@@ -1,18 +1,8 @@
 <section class="row">
     <div class="col-md-4" ng-repeat="option in $ctrl.options">
-        <div class="image-grid__thumbnail">
-            <a class="thumbnail" href="{{option.href}}">
-                <img src="{{option.src}}">                
-            </a>
-
-            <!-- Partially transparent background layer -->
-            <div class="image-grid__info-panel-bg">
-            </div>
-
-            <div class="image-grid__info-panel">
-                <h6>{{option.title}}</h6>
-                <p>{{option.description}}</p>
-            </div>
-        </div>
+        <info-image src="option.src" href="option.href">
+            <h6>{{option.title}}</h6>
+            <p>{{option.description}}</p>
+        </info-image>
     </div>
 </section>
