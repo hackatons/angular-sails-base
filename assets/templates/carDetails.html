@@ -11,12 +11,12 @@
       <div class="col col-md-7">
 
         <block header="'What\'s The Model About?'">
-          <icon-block icon="'/images/group-114.png'" text="'75 000km'"></icon-block>
-          <icon-block icon="'/images/group-115.png'" text="'Automatic'"></icon-block>
-          <icon-block icon="'/images/group-116.png'" text="'3.0 (225 kW)'"></icon-block>
-          <icon-block icon="'/images/group-117.png'" text="'Front Wheel Drive'"></icon-block>
-          <icon-block icon="'/images/group-119.png'" text="'2 doors 5 seats'"></icon-block>
-          <icon-block icon="'/images/group-120.png'" text="'Dark Blue'"></icon-block>
+          <icon-block icon="'/images/group-114.png'" text="car.mileage"></icon-block>
+          <icon-block icon="'/images/group-115.png'" text="car.transmission"></icon-block>
+          <icon-block icon="'/images/group-116.png'" text="car.engine"></icon-block>
+          <icon-block icon="'/images/group-117.png'" text="car.drive"></icon-block>
+          <icon-block icon="'/images/group-119.png'" text="car.doors + ' doors ' + car.seats + ' seats'"></icon-block>
+          <icon-block icon="'/images/group-120.png'" text="car.color"></icon-block>
           <icon-block icon="'/images/group-121.png'" text="'Black'"></icon-block>
         </block>
 
@@ -94,7 +94,7 @@
           <div class="col col-md-6" style="padding: 5px 0;">
             <div class="row">
               <div class="col col-md-6"><label>Doors: </label></div>
-              <div class="col col-md-6">4</div>
+              <div class="col col-md-6">{{car.doors}}</div>
             </div>
           </div>
           <div class="col col-md-6" style="padding: 5px 0;">
@@ -138,7 +138,7 @@
           <div class="col col-md-6" style="padding: 5px 0;">
             <div class="row">
               <div class="col col-md-6"><label>Horsepower</label></div>
-              <div class="col col-md-6">240</div>
+              <div class="col col-md-6">{{car.horsepower}}</div>
             </div>
           </div>
           <div class="col col-md-6" style="padding: 5px 0;">
@@ -161,7 +161,7 @@
           </div>
           <div class="col col-md-6" style="padding: 5px 0;">
             <div class="row">
-              <div class="col col-md-6"><label>Powr train</label></div>
+              <div class="col col-md-6"><label>Power train</label></div>
               <div class="col col-md-6">Gas</div>
             </div>
           </div>
