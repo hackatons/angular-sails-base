@@ -26,7 +26,8 @@ angular.module('application').controller('carDetailsController', ["$scope", "$ht
 
     /////////////////////////////
 
-    $scope.similarcars = [car1, car2, car3];
+    $scope.similarcars = [];
+   $scope.slides = [];
 
     function init() {
       getCars({id: selectedCarId}).success(function (car) {
