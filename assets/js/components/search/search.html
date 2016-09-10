@@ -1,0 +1,57 @@
+<section class="search">
+    <label>Brand</label>
+    <btn-group options="$ctrl.brands"></btn-group>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label>Mileage</label>
+            <range-slider min="0" max="500000" label="'KM'"></range-slider>
+        </div>
+        <div class="col-md-4">
+            <label>Price</label>
+            <range-slider min="1" max="500000" label="'EUR'"></range-slider>
+        </div>
+        <div class="col-md-4">
+            <label>Year</label>
+            <range-slider min="1970" max="2016"></range-slider>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <label>Color</label>
+            <btn-group options="$ctrl.colors" shape="'circle'"></btn-group>
+
+            <label>Features</label>
+            <btn-group options="$ctrl.features"></btn-group>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Doors</label>
+                    <btn-group options="$ctrl.doors" shape="'circle'"></btn-group>                    
+                </div>
+                <div class="col-md-6">
+                    <label>Seats</label>
+                    <btn-group options="$ctrl.seats" shape="'circle'"></btn-group>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label>Petrol Consumption (average)</label>
+            <range-slider min="0" max="20" label="'L'"></range-slider>
+            
+            <label>Horsepower</label>
+            <range-slider min="0" max="500" label="'KW'"></range-slider>
+
+            <label>Transmission</label>
+            <btn-group options="$ctrl.transmissions"></btn-group>
+
+            <div class="text-right">
+                <button class="btn btn-default">
+                    <span class="glyphicon glyphicon-search"></span>
+                    Search
+                </button>
+            </div>
+        </div> 
+    </div>
+</section>

@@ -37,6 +37,9 @@ module.exports.policies = {
   CarController: {
     '*': true
   },
+  NotificationController: {
+    '*': true
+  },
   TranslationController: {
     get: true
   }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+
+        <!-- BOOTSTRAP -->
+        <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+        <!--<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>-->
+
+        <!-- ANGULAR -->
+        <script src="node_modules/angular/angular.js"></script>
+
+        <!-- BUTTON GROUP COMPONENT -->
+        <link rel="stylesheet" type="text/css" href="btn-group.style.css">
+        <script src="btn-group.component.js"></script>
+
+        <!-- RANGE SLIDER COMPONENT -->
+        <link rel="stylesheet" type="text/css" href="node_modules/angularjs-slider/dist/rzslider.css">
+        <script src="node_modules/angularjs-slider/dist/rzslider.js"></script>
+        <script src="range-slider.component.js"></script>
+
+        <!-- SEARCH COMPONENT -->
+        <link rel="stylesheet" type="text/css" href="search.style.css">
+        <script src="search.component.js"></script>
+
+        <!-- IMAGE GRID COMPONENT -->
+        <link rel="stylesheet" type="text/css" href="image-grid.style.css">
+        <script src="image-grid.component.js"></script>
+
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="app">
+        <div class="container">
+            <search></search>
+
+            <label>3 beauties found</label>
+            <image-grid></image-grid>
+        </div>
+    </body>
+</html>

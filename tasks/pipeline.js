@@ -18,7 +18,9 @@ var cssFilesToInject = [
   '/bower_components/bootstrap/dist/css/bootstrap.min.css',
   '/bower_components/font-awesome/css/font-awesome.min.css',
   '/bower_components/angular-material/angular-material.min.css',
-  'styles/**/*.css'
+  '/bower_components/angularjs-slider/dist/rzslider.min.css',
+  'styles/**/*.css',
+  'js/**/components/**/*.css'
 ];
 
 
@@ -46,6 +48,7 @@ var jsFilesToInject = [
   '/bower_components/angular-scroll-glue/src/scrollglue.js',
   '/bower_components/angular-translate/angular-translate.min.js',
   '/bower_components/angular-translate-loader-url/angular-translate-loader-url.min.js',
+  '/bower_components/angularjs-slider/dist/rzslider.min.js',
 
    //angular sails
   '/bower_components/angular-sails/dist/angular-sails.min.js',

@@ -1,0 +1,34 @@
+.info-image {
+    position: relative;
+}
+
+.info-image__info-panel, 
+.info-image__info-panel-bg {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    transition: height 0.25s, opacity 0.25s;
+}
+
+.info-image:hover .info-image__info-panel, 
+.info-image:hover .info-image__info-panel-bg {
+    height: 30%;
+}
+
+.info-image:hover .info-image__info-panel-bg {
+    opacity: 0.6;
+}
+
+.info-image__info-panel-bg {    
+    background-color: black;    
+    opacity: 0.3;
+}
+
+.info-image__info-panel {
+    padding-left: 4px;
+    padding-right: 4px;
+    color: white;
+}

@@ -13,6 +13,43 @@ File Description: Place here your custom CSS styles
   color: #119DFD;
 }
 
+.sk-details__icon {
+  margin: 0 auto;
+}
+.sk-text-centralizer {
+  text-align: center;
+}
+
+.sk-block__text {
+  margin-left: 0 !important;
+  margin-right: 5px !important;
+  /*text-align: justify;*/
+}
+
+.sk-details__icon-list-image {
+  float: left;
+  margin-right: 10px;
+}
+
+.sk-details__stars-outer-container {
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  padding: 5px;
+  height: 60px;
+  width: 410px;
+}
+.sk-details__stars-inner-container {
+  padding: 0 10px 0 0;
+}
+.sk-details__star {
+  float:left;
+}
+.sk-details__stars_euroncap {
+  float:left;
+  margin-left: 50px;
+  height: 50px;
+}
+
 
 /* Homepage */
 .sk-hero{

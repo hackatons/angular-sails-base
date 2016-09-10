@@ -32,6 +32,8 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  'get /api/notification/order': 'NotificationController.notifyOrder',
+
   'get /api/language': 'TranslationController.get',
 
   'get /logout': 'AuthController.logout',

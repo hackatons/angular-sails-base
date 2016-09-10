@@ -32,6 +32,7 @@
     "install": "~1.0.4",
     "angular-sails": "~1.1.4",
     "angular-translate": "~2.7.2",
-    "angular-translate-loader-url": "~2.7.2"
+    "angular-translate-loader-url": "~2.7.2",
+    "angularjs-slider": "^5.5.0"
   }
 }
