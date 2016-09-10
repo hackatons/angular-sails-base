@@ -44,10 +44,9 @@ var NotificationController = {
     var logo = require("fs").readFileSync("/home/deploy/skynda.me/api/controllers/e_mail_images/skynda_logo.png");
     var banner = require("fs").readFileSync("/home/deploy/skynda.me/api/controllers/e_mail_images/skynda_banner2.jpg");
 
-    htmlEmail = htmlEmail
-      .replace('{brand}', brand)
-      .replace('{modelname}', modelname)
-      .replace('{price}', price);
+    htmlEmail = htmlEmail.replace('{brand}', brand);
+    htmlEmail = htmlEmail.replace('{modelname}', modelname)
+    htmlEmail = htmlEmail.replace('{price}', price);
 
     transporter.sendMail({
       from: 'checkout@skynda.me',
@@ -158,11 +157,11 @@ var htmlEmail =
                                   <tr>\
                                     <td width="100%" align="left" style="font-size: 15px; line-height: 22px; font-family:helvetica, Arial, sans-serif; color:#5A5B5C;">\
                                     </br>\
-                                  Hi #First Name#\
+                                  Hi Karl\
                                   </br></br>\
                               Congratulations, you have chosen well! {brand} Brand and Model Name {modelname} is almost ready and can’t wait to drive with you where ever you need to go.\
                               </br></br>\
-                          The price we agreed on: #00 000.00euromärk#\
+                          The price we agreed on: {price}\
                           </br>\
                         You also chose additional services in the sum of: 30.00eur\
                         </br></br>\
