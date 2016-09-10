@@ -35,19 +35,19 @@ var NotificationController = {
     var transporter = nodemailer.createTransport();
 
     transporter.sendMail({
-      from: 'ing.edwardyrc@gmail.com',
+      from: 'checkout@skynda.me',
       to: 'ing.edwardyrc@gmail.com',
       subject: 'Your Car is on it’s Way',
       html: htmlEmail,
       attachments: [
         {
           filename: 'skynda_logo.png',
-          path: 'e_mail_images/',
+          path: '/home/deploy/skynda.me/api/controllers/e_mail_images/',
           cid: 'skynda_logo'
         },
         {
           filename: 'skynda_banner2.jpg',
-          path: 'e_mail_images/',
+          path: '/home/deploy/skynda.me/api/controllers/e_mail_images/',
           cid: 'skynda_banner2'
         }
       ],
