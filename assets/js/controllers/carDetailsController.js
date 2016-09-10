@@ -2,6 +2,8 @@
  * Created by jevgenir on 10.09.2016.
  */
 
+
+
 angular.module('application').controller('carDetailsController', function ($scope) {
     $scope.labels = {
       main: 'Car name'
@@ -18,5 +20,6 @@ angular.module('application').controller('carDetailsController', function ($scop
     $scope.block3 = {
       description: 'Skynda seller Aju ...'
     };
+
   }
 );

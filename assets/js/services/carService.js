@@ -1,4 +1,4 @@
-angular.module('application').service('carService', function ($scope, $http) {
+angular.module('application').service('carService', function ($http) {
     var carEndpoint = '/api/car';
     this.getCars = function (params){
       var config = {
