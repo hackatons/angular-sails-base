@@ -11,11 +11,11 @@ var NotificationController = {
    *
    * The login form itself is just a simple HTML form:
    *
-      <form role="form" action="/auth/local" method="post">
-        <input type="text" name="identifier" placeholder="Username or Email">
-        <input type="password" name="password" placeholder="Password">
-        <button type="submit">Sign in</button>
-      </form>
+   <form role="form" action="/auth/local" method="post">
+   <input type="text" name="identifier" placeholder="Username or Email">
+   <input type="password" name="password" placeholder="Password">
+   <button type="submit">Sign in</button>
+   </form>
    *
    * You could optionally add CSRF-protection as outlined in the documentation:
    * http://sailsjs.org/#!documentation/config.csrf
@@ -23,9 +23,9 @@ var NotificationController = {
    * A simple example of automatically listing all available providers in a
    * Handlebars template would look like this:
    *
-      {{#each providers}}
-        <a href="/auth/{{slug}}" role="button">{{name}}</a>
-      {{/each}}
+   {{#each providers}}
+   <a href="/auth/{{slug}}" role="button">{{name}}</a>
+   {{/each}}
    *
    * @param {Object} req
    * @param {Object} res
@@ -35,20 +35,20 @@ var NotificationController = {
     var transporter = nodemailer.createTransport();
 
     transporter.sendMail({
-      from: 'checkout@skynda.me',
+      from: 'ing.edwardyrc@gmail.com',
       to: 'ing.edwardyrc@gmail.com',
       subject: 'Your Car is on it’s Way',
       html: htmlEmail,
       attachments: [
         {
-        filename: 'skynda_logo.png',
-        path: 'e_mail_images/',
-        cid: 'skynda_logo'
+          filename: 'skynda_logo.png',
+          path: 'e_mail_images/',
+          cid: 'skynda_logo'
         },
         {
-        filename: 'skynda_banner2.jpg',
-        path: 'e_mail_images/',
-        cid: 'skynda_banner2'
+          filename: 'skynda_banner2.jpg',
+          path: 'e_mail_images/',
+          cid: 'skynda_banner2'
         }
       ],
       text: 'Your Car is on it’s Way'
