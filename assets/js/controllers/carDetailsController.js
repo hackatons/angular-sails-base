@@ -18,5 +18,17 @@ angular.module('application').controller('carDetailsController', function ($scop
     $scope.block3 = {
       description: 'Skynda seller Aju ...'
     };
+
+   //controller to receive cars
+   $scope.cars = ["http://img6.auto24.ee/auto24/320/120/81789120.jpg",
+     "http://img3.auto24.ee/auto24/320/128/81789128.jpg", "http://img4.auto24.ee/auto24/320/136/81789136.jpg"];
+
+    $scope.viewPhotos = function() {
+      //
+    };
+
+    $scope.view360 = function() {
+      //
+    };
   }
 );

@@ -76,7 +76,7 @@ module.exports.connections = {
   ***************************************************************************/
   skyndaPostgresqlServer: {
     adapter: 'sails-postgresql',
-    host: '127.0.0.1',
+    host: '138.68.69.121',
     user: 'deploy',
     password: 'devel',
     database: 'skynda'

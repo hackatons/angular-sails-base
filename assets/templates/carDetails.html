@@ -1,109 +1,161 @@
 <div ng-controller="carDetailsController">
+<div class="container">
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
-  <div class="container">
-    <div class="row">
-      <img src="https://i.gyazo.com/7d20242aa948bfc4e20fbb7063907ca5.png" alt="" style="width: 100%">
-    </div>
+    <!-- Wrapper for slides -->
+    <style type="text/css">
+      .carousel-caption {
+        bottom: -20px;
+      }
 
-    <div class="row">
+      .carousel .item {
+        width: 100%; /*slider width*/
+        max-height: 250px; /*slider height*/
+      }
 
-      <!-- LEFT COLUMN -->
-      <div class="col col-md-7">
+      .carousel .item img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%; /*img width*/
+        height: 250px;
+      }
 
-        <block header="'What\'s The Model About?'">
-          <!-- TODO: icons -->
-        </block>
 
-        <block header="'We have it in excellent condition'">
-          {{block2.description}}
-        </block>
+    </style>
+    <div class="carousel-inner" role="listbox">
+      <div class="item" ng-class="{active:!$index}" ng-repeat="image in cars">
+        <img src={{image}} class="img-responsive">
 
-        <block header="'Nice features'">
-          {{block3.description}}
-        </block>
-
-        <block header="'Car History'">
-          <!-- TODO: car history -->
-        </block>
-
-        <block header="'Performance'">
-          <!-- TODO: Performance -->
-        </block>
-
-        <block header="'Safety'">
-          <!-- TODO: Safety -->
-        </block>
-
-        <block header="'Our Certified Inspector\'s Report'">
-          <!-- TODO: our certified Inspectors report -->
-        </block>
-
-        <block header="'Skynda Care'">
-          <!-- TODO: skynda care -->
-        </block>
-
-        <block header="'Reviews'">
-          <!-- TODO: Reviews -->
-        </block>
-
-        <block header="'Other cars that you might like'">
-          <!-- TODO: Other cars that you might like -->
-        </block>
-
-      </div>
-
-      <!-- RIGHT COLUMN -->
-      <div class="col col-md-5">
-
-        <ul class="nav nav-tabs" role="tablist">
-          <li class="active"><a href="#htab1" role="tab" data-toggle="tab" aria-expanded="true"><i class="fa fa-home pr-5"></i>Very Flexible</a></li>
-          <li class=""><a href="#htab2" role="tab" data-toggle="tab" aria-expanded="false"><i class="fa fa-user pr-5"></i>Top Notch 24/7 Support</a></li>
-        </ul>
-
-        <div class="tab-content">
-          <div class="tab-pane fade active in" id="htab1">
-            <h1 class="text-center">Very Flexible</h1>
-            <div class="space-bottom"></div>
-            <div class="row">
-              <div class="col-md-6">
-                <ul class="list-icons">
-                  <li><i class="icon-check pr-10"></i> Lorem ipsum dolor sit amet maiores</li>
-                  <li><i class="icon-check pr-10"></i> Consectetur adipisicing elit</li>
-                  <li><i class="icon-check pr-10"></i> Aut earum numquam hic placeat</li>
-                  <li><i class="icon-check pr-10"></i> Fugiat rem consequatur neque</li>
-                  <li><i class="icon-check pr-10"></i> Expedita placeat omnis pariatur</li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere hic qui non placeat ad explicabo dignissimos amet iusto veniam!</p>
-                <p>Quo expedita tempore modi minima at adipisci saepe excepturi alias consequuntur sunt asperiores enim ut assumenda hic vitae, odio deleniti illo, veniam quas!</p>
-              </div>
-            </div>
-            <a href="page-services.html" class="btn btn-default">Read more</a>
-          </div>
-          <div class="tab-pane fade" id="htab2">
-            <h1 class="text-center">Top Notch 24/7 Support</h1>
-            <div class="space-bottom"></div>
-            <div class="row">
-              <div class="col-md-6">
-                <ul class="list-icons">
-                  <li><i class="icon-check pr-10"></i> Lorem ipsum dolor sit amet maiores</li>
-                  <li><i class="icon-check pr-10"></i> Consectetur adipisicing elit</li>
-                  <li><i class="icon-check pr-10"></i> Aut earum numquam hic placeat</li>
-                  <li><i class="icon-check pr-10"></i> Fugiat rem consequatur neque</li>
-                  <li><i class="icon-check pr-10"></i> Expedita placeat omnis pariatur</li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere hic qui non placeat ad explicabo dignissimos amet iusto veniam!</p>
-                <p>Quo expedita tempore modi minima at adipisci saepe excepturi alias consequuntur sunt asperiores enim ut assumenda hic vitae, odio deleniti illo, veniam quas!</p>
-              </div>
-            </div>
-            <a href="page-services.html" class="btn btn-default">Read more</a>
-          </div>
+        <div class="carousel-caption">
+          <button id="carBtn" ng-click="count = count + 1" ng-init="count=0">
+            View Photos
+          </button>
+          <button ng-click="count = count + 1" ng-init="count=0">360 View</button>
         </div>
 
       </div>
     </div>
+
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
+
+  <div class="row">
+
+    <!-- LEFT COLUMN -->
+    <div class="col col-md-7">
+
+      <block header="'What\'s The Model About?'">
+        <!-- TODO: icons -->
+      </block>
+
+      <block header="'We have it in excellent condition'">
+        {{block2.description}}
+      </block>
+
+      <block header="'Nice features'">
+        {{block3.description}}
+      </block>
+
+      <block header="'Car History'">
+        <!-- TODO: car history -->
+      </block>
+
+      <block header="'Performance'">
+        <!-- TODO: Performance -->
+      </block>
+
+      <block header="'Safety'">
+        <!-- TODO: Safety -->
+      </block>
+
+      <block header="'Our Certified Inspector\'s Report'">
+        <!-- TODO: our certified Inspectors report -->
+      </block>
+
+      <block header="'Skynda Care'">
+        <!-- TODO: skynda care -->
+      </block>
+
+      <block header="'Reviews'">
+        <!-- TODO: Reviews -->
+      </block>
+
+      <block header="'Other cars that you might like'">
+        <!-- TODO: Other cars that you might like -->
+      </block>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="col col-md-5">
+
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="active"><a href="#htab1" role="tab" data-toggle="tab" aria-expanded="true"><i
+          class="fa fa-home pr-5"></i>Very Flexible</a></li>
+        <li class=""><a href="#htab2" role="tab" data-toggle="tab" aria-expanded="false"><i class="fa fa-user pr-5"></i>Top
+          Notch 24/7 Support</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane fade active in" id="htab1">
+          <h1 class="text-center">Very Flexible</h1>
+
+          <div class="space-bottom"></div>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-icons">
+                <li><i class="icon-check pr-10"></i> Lorem ipsum dolor sit amet maiores</li>
+                <li><i class="icon-check pr-10"></i> Consectetur adipisicing elit</li>
+                <li><i class="icon-check pr-10"></i> Aut earum numquam hic placeat</li>
+                <li><i class="icon-check pr-10"></i> Fugiat rem consequatur neque</li>
+                <li><i class="icon-check pr-10"></i> Expedita placeat omnis pariatur</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere hic qui non placeat ad explicabo
+                dignissimos amet iusto veniam!</p>
+
+              <p>Quo expedita tempore modi minima at adipisci saepe excepturi alias consequuntur sunt asperiores enim ut
+                assumenda hic vitae, odio deleniti illo, veniam quas!</p>
+            </div>
+          </div>
+          <a href="page-services.html" class="btn btn-default">Read more</a>
+        </div>
+        <div class="tab-pane fade" id="htab2">
+          <h1 class="text-center">Top Notch 24/7 Support</h1>
+
+          <div class="space-bottom"></div>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-icons">
+                <li><i class="icon-check pr-10"></i> Lorem ipsum dolor sit amet maiores</li>
+                <li><i class="icon-check pr-10"></i> Consectetur adipisicing elit</li>
+                <li><i class="icon-check pr-10"></i> Aut earum numquam hic placeat</li>
+                <li><i class="icon-check pr-10"></i> Fugiat rem consequatur neque</li>
+                <li><i class="icon-check pr-10"></i> Expedita placeat omnis pariatur</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere hic qui non placeat ad explicabo
+                dignissimos amet iusto veniam!</p>
+
+              <p>Quo expedita tempore modi minima at adipisci saepe excepturi alias consequuntur sunt asperiores enim ut
+                assumenda hic vitae, odio deleniti illo, veniam quas!</p>
+            </div>
+          </div>
+          <a href="page-services.html" class="btn btn-default">Read more</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 </div>
