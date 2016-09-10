@@ -34,11 +34,24 @@ var NotificationController = {
     var nodemailer = require('nodemailer');
     var transporter = nodemailer.createTransport();
 
+    var logo = require("fs").readFileSync("/home/deploy/skynda.me/api/controllers/e_mail_images/skynda_logo.png");
+    var banner = require("fs").readFileSync("/home/deploy/skynda.me/api/controllers/e_mail_images/skynda_banner2.jpg");
+
     transporter.sendMail({
       from: 'checkout@skynda.me',
       to: 'ing.edwardyrc@gmail.com',
-      subject: 'Your Car is on it’s Way',
+      subject: 'Your car is on it’s Way',
       html: htmlEmail,
+      attachments: [
+        {
+          filename: 'skynda_logo.png',
+          contents: logo
+        },
+        {
+          filename: 'skynda_banner2.jpg',
+          contents: banner
+        }
+      ],
       text: 'Your Car is on it’s Way'
     });
     transporter.close();
@@ -74,7 +87,7 @@ var htmlEmail =
                       <tr>\
                         <td align="left">\
                           <a href="../html/index.html">\
-                            <img id="skynda_logo" src="e_mail_images/skynda_logo.png" alt="Company Logo" style="display: block;"/>\
+                            <img src="skynda_logo.jpg" alt="Company Logo" style="display: block;"/>\
                           </a>\
                         </td>\
                       </tr>\
@@ -106,7 +119,7 @@ var htmlEmail =
                       <tr>\
                         <td align="center" bgcolor="#ffffff" >\
                           <a href="#">\
-                            <img id="skynda_banner2" src="e_mail_images/skynda_banner2.jpg" width="580" alt="Section one image" style="display: block;"/>\
+                            <img src="skynda_banner2.jpg" width="580" alt="Section one image" style="display: block;"/>\
                           </a>\
                         </td>\
                       </tr>\
