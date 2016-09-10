@@ -12,3 +12,12 @@ angular.module("application").component("block", {
     header: '<'
   }
 });
+
+angular.module('application').component('simple', {
+  templateUrl: '/js/components/simple.html',
+  controller: function ($scope, $element, $attrs) {
+    console.log('simpel component initialized');
+    $scope.title = "hello";
+    console.log($attrs);
+  }
+});
