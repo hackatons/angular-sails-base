@@ -9,15 +9,17 @@
 
       <!-- LEFT COLUMN -->
       <div class="col col-md-7">
+        <br />
 
-        <block header="'What\'s The Model About?'">
+        <block header="'Overview'">
+          <br />
           <icon-block icon="'/images/group-114.png'" text="car.mileage"></icon-block>
           <icon-block icon="'/images/group-115.png'" text="car.transmission"></icon-block>
           <icon-block icon="'/images/group-116.png'" text="car.engine"></icon-block>
           <icon-block icon="'/images/group-117.png'" text="car.drive"></icon-block>
           <icon-block icon="'/images/group-119.png'" text="car.doors + ' doors ' + car.seats + ' seats'"></icon-block>
           <icon-block icon="'/images/group-120.png'" text="car.color"></icon-block>
-          <icon-block icon="'/images/group-121.png'" text="'Black'"></icon-block>
+          <!--<icon-block icon="'/images/group-121.png'" text="'Black'"></icon-block>-->
         </block>
 
         <block header="'What\'s this model about?'">
@@ -29,10 +31,6 @@
         </block>
 
         <block header="'Nice features'">
-          {{block3.description}}
-        </block>
-
-        <block header="'Car History'">
           <div class="col col-md-4" style="padding: 5px 0;">
             <img src="/images/ok.png" width="24" class="sk-details__icon-list-image" />
             Steering Wheel Controls
@@ -71,13 +69,16 @@
           </div>
           <div class="col col-md-4" style="padding: 5px 0;">
             <div class="row">
-              <label>City: </label> 7.5 l / 100 km
+              <div class="col col-md-6"><label>City: </label></div>
+              <div class="col col-md-6">7.5 l / 100 km</div>
             </div>
             <div class="row">
-              <label>Highway: </label>  6.5 l / 100 km
+              <div class="col col-md-6"><label>Highway: </label></div>
+              <div class="col col-md-6">6.5 l / 100 km</div>
             </div>
             <div class="row">
-              <label>Average: </label>  7.0 l / 100 km
+              <div class="col col-md-6"><label>Average: </label></div>
+              <div class="col col-md-6">7.0 l / 100 km</div>
             </div>
           </div>
         </block>
