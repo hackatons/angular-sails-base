@@ -1,7 +1,7 @@
 // The controller is a regular JavaScript function. It is called
 // once when AngularJS runs into the ng-controller declaration.
 
-angular.module('application').controller('homepageController', function ($scope) {
+angular.module('application').controller('homepageController', function ($scope, carService) {
 
     $scope.dummyMessage = 'everything is awesome';
 
@@ -47,6 +47,12 @@ angular.module('application').controller('homepageController', function ($scope)
     $scope.cars = {
       popular: popular,
       recent: recent
-    }
+    };
+
+    $scope.getCarByModelOrBrand = function(val) {
+       carService.getCarByModelOrBrand(val).then(function(data) {
+         console.log(data);
+       });
+    };
   }
 );

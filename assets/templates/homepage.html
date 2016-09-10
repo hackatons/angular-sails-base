@@ -54,9 +54,11 @@
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <div class="input-group sk-search">
-            <input type="text" class="form-control" placeholder="Enter a Car Name"/>
+            <input type="text" class="form-control" placeholder="Enter a Car Name" ng-model="searchTerm" />
             <span class="input-group-btn">
-             <button class="btn input-group-btn  btn-default" type="button">Go!</button>
+             <button class="btn input-group-btn  btn-default" ng-click="getCarByModelOrBrand(searchTerm)" type="button">
+               Go!
+              </button>
             </span>
           </div><!-- /input-group -->
         </div><!-- /.col-lg-6 -->
