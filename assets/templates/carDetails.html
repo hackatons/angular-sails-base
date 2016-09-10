@@ -1,36 +1,20 @@
 <div ng-controller="carDetailsController">
+
+  <info-image
+    src="'http://www.telegraph.co.uk/content/dam/motoring2/2015/12/03/porsche-panamera-front-1-xlarge-xlarge_trans++5yQLQqeH37t50SCyM4-zeBU--41c5Cba04Sh5SZbNZ8.jpg'"
+    href="'www.google.com'">
+    <h2 style="font-size: 2.4em; font-weight: bolder; color: whitesmoke">{{car.brand}}</h2>
+
+    <div class="container">
+      Bacon ipsum dolor amet corned beef short ribs shoulder sirloin strip steak swine short loin.
+      Fatback capicola porchetta, cow corned beef rump prosciutto sausage kielbasa shankle picanha.
+      Ham hock hamburger kielbasa pancetta swine venison. T-bone sausage venison kevin chuck
+      tenderloin picanha turducken biltong strip steak cupim frankfurter meatloaf turkey.
+      Hamburger andouille prosciutto flank bacon salami. Swine ground round doner corned beef pork ribeye.
+    </div>
+  </info-image>
+
   <div class="container">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
-    <!-- Wrapper for slides -->
-    <style type="text/css">
-
-
-
-    </style>
-    <div class="carousel-inner" role="listbox">
-    <div class="item" ng-class="{active:!$index}" ng-repeat="image in cars">
-    <img src={{image}} class="img-responsive">
-
-    <div class="carousel-caption">
-    <button id="carBtn" ng-click="count = count + 1" ng-init="count=0">
-    View Photos
-    </button>
-    <button ng-click="count = count + 1" ng-init="count=0">360 View</button>
-    </div>
-
-    </div>
-    </div>
-
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-    </a>
-    </div>
 
     <div class="row">
       <br/>
@@ -371,38 +355,6 @@
           <!-- TODO: Other cars that you might like -->
         </block>
 
-        <block header="block10.header">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-          make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-          sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.
-
-          Why do we use it?
-          It is a long established fact that a reader will be distracted by the readable content of a page when looking
-          at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
-          opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
-          packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'
-          will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by
-          accident, sometimes on purpose (injected humour and the like).
-
-
-          Where does it come from?
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
-          literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
-          College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
-          and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem
-          Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-          Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
-          Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
-          1.10.32.
-
-          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
-          1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original
-          form, accompanied by English versions from the 1914 translation by H. Rackham.
-        </block>
-
       </div>
 
       <div class="col col-md-5">
@@ -413,30 +365,5 @@
 
   </div>
 
-    <div class="tab-pane fade" id="htab2">
-      <h1 class="text-center">Top Notch 24/7 Support</h1>
-
-      <div class="space-bottom"></div>
-      <div class="row">
-        <div class="col-md-6">
-          <ul class="list-icons">
-            <li><i class="icon-check pr-10"></i> Lorem ipsum dolor sit amet maiores</li>
-            <li><i class="icon-check pr-10"></i> Consectetur adipisicing elit</li>
-            <li><i class="icon-check pr-10"></i> Aut earum numquam hic placeat</li>
-            <li><i class="icon-check pr-10"></i> Fugiat rem consequatur neque</li>
-            <li><i class="icon-check pr-10"></i> Expedita placeat omnis pariatur</li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere hic qui non placeat ad explicabo
-            dignissimos amet iusto veniam!</p>
-
-          <p>Quo expedita tempore modi minima at adipisci saepe excepturi alias consequuntur sunt asperiores enim ut
-            assumenda hic vitae, odio deleniti illo, veniam quas!</p>
-        </div>
-      </div>
-      <a href="page-services.html" class="btn btn-default">Read more</a>
-    </div>
-  </div>
 
 </div>
