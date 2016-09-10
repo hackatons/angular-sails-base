@@ -34,8 +34,8 @@ var NotificationController = {
     var nodemailer = require('nodemailer');
     var transporter = nodemailer.createTransport();
 
-    var logo = require("fs").readFileSync("e_mail_images/skynda_logo.png");
-    var banner = require("fs").readFileSync("e_mail_images/skynda_banner2.jpg");
+    var logo = require("fs").readFileSync("/home/deploy/skynda.me/api/controllers/e_mail_images/skynda_logo.png");
+    var banner = require("fs").readFileSync("/home/deploy/skynda.me/api/controllers/e_mail_images/skynda_banner2.jpg");
 
     transporter.sendMail({
       from: 'checkout@skynda.me',
