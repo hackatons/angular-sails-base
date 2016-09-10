@@ -33,6 +33,7 @@ module.exports.routes = {
   ***************************************************************************/
 
   'get /api/notification/order': 'NotificationController.notifyOrder',
+  'get /api/car/by-brand-or-model': 'CarController.getBybrandOrModel',
 
   'get /api/language': 'TranslationController.get',
 
