@@ -27,7 +27,7 @@
     "font-awesome": ">=4.3.0",
     "bootstrap": ">=3.2.0",
     "angular-scroll-glue": "~2.0.6",
-    "angular-ui-router": "~0.2.15",
+    "angular-ui-router": "1.0.0-beta.2",
     "bower": "*",
     "install": "~1.0.4",
     "angular-sails": "~1.1.4",
