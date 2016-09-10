@@ -118,6 +118,13 @@ File Description: Place here your custom CSS styles
   height: 250px;
 }
 
+
+.sk-car-details__popular-image-title {
+  font-size: 1em;
+  font-weight: bolder;
+  color: whitesmoke
+}
+
 /*
 ===========================
 ===========================
@@ -184,4 +191,10 @@ File Description: Place here your custom CSS styles
 
 .sk-car-placeholder{
   margin-bottom: 20px;
+}
+
+.sk-home__popular-image-title {
+  font-size: 1.3em;
+  font-weight: bolder;
+  color: whitesmoke
 }

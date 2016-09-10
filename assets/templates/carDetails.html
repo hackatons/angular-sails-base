@@ -353,8 +353,16 @@
           </div>
         </block>
 
+        <!-- Other cars -->
         <block header="'Other cars that you might like'">
-          <!-- TODO: Other cars that you might like -->
+          <div class="col-md-4" ng-repeat="car in similarcars">
+            <info-image
+              src="car.img"
+              href="'/car-details/' + car.id">
+              <h2 class="sk-car-details__popular-image-title">{{car.brand}}</h2>
+              {{car.description}}
+            </info-image>
+          </div>
         </block>
 
       </div>
