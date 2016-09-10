@@ -11,11 +11,11 @@ var NotificationController = {
    *
    * The login form itself is just a simple HTML form:
    *
-      <form role="form" action="/auth/local" method="post">
-        <input type="text" name="identifier" placeholder="Username or Email">
-        <input type="password" name="password" placeholder="Password">
-        <button type="submit">Sign in</button>
-      </form>
+   <form role="form" action="/auth/local" method="post">
+   <input type="text" name="identifier" placeholder="Username or Email">
+   <input type="password" name="password" placeholder="Password">
+   <button type="submit">Sign in</button>
+   </form>
    *
    * You could optionally add CSRF-protection as outlined in the documentation:
    * http://sailsjs.org/#!documentation/config.csrf
@@ -23,9 +23,9 @@ var NotificationController = {
    * A simple example of automatically listing all available providers in a
    * Handlebars template would look like this:
    *
-      {{#each providers}}
-        <a href="/auth/{{slug}}" role="button">{{name}}</a>
-      {{/each}}
+   {{#each providers}}
+   <a href="/auth/{{slug}}" role="button">{{name}}</a>
+   {{/each}}
    *
    * @param {Object} req
    * @param {Object} res
@@ -34,16 +34,29 @@ var NotificationController = {
     var nodemailer = require('nodemailer');
     var transporter = nodemailer.createTransport();
 
+    var logo = require("fs").readFileSync("/home/deploy/skynda.me/api/controllers/e_mail_images/skynda_logo.png");
+    var banner = require("fs").readFileSync("/home/deploy/skynda.me/api/controllers/e_mail_images/skynda_banner2.jpg");
+
     transporter.sendMail({
       from: 'checkout@skynda.me',
       to: 'ing.edwardyrc@gmail.com',
-      subject: 'hello',
+      subject: 'Your car is on it’s Way',
       html: htmlEmail,
-      text: 'hello world!'
+      attachments: [
+        {
+          filename: 'skynda_logo.png',
+          contents: logo
+        },
+        {
+          filename: 'skynda_banner2.jpg',
+          contents: banner
+        }
+      ],
+      text: 'Your Car is on it’s Way'
     });
     transporter.close();
 
-    res.render(htmlEmail);
+    res.send('done');
   }
 };
 
@@ -74,7 +87,7 @@ var htmlEmail =
                       <tr>\
                         <td align="left">\
                           <a href="../html/index.html">\
-                            <img src="e_mail_images/skynda_logo.png" alt="Company Logo" style="display: block;"/>\
+                            <img src="skynda_logo.jpg" alt="Company Logo" style="display: block;"/>\
                           </a>\
                         </td>\
                       </tr>\
@@ -106,7 +119,7 @@ var htmlEmail =
                       <tr>\
                         <td align="center" bgcolor="#ffffff" >\
                           <a href="#">\
-                            <img src="e_mail_images/skynda_banner2.jpg" width="580" alt="Section one image" style="display: block;"/>\
+                            <img src="skynda_banner2.jpg" width="580" alt="Section one image" style="display: block;"/>\
                           </a>\
                         </td>\
                       </tr>\
