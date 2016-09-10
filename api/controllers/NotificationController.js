@@ -32,10 +32,15 @@ var NotificationController = {
    */
   notifyOrder: function (req, res) {
     var nodemailer = require('nodemailer');
-    var transporter = nodemailer.createTransport();
-
+    var transporter = nodemailer.createTransport({
+      service: 'Gmail',
+      auth: {
+        user: 'skynda.me@gmail.com',
+        pass: 'me.skynda'
+      }
+    });
     transporter.sendMail({
-      from: 'ing.edwardyrc@gmail.com',
+      from: 'skynda.me@gmail.com',
       to: 'ing.edwardyrc@gmail.com',
       subject: 'hello',
       html: '<b>hello world!</b>',
