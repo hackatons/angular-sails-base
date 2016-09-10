@@ -3,6 +3,25 @@
  */
 (function () {
   var carEndpoint = '/api/car'; // TODO: use service
+  // TODO: to dummy service
+  var car1 = {
+    id: '85eada83-b14a-4cca-9ea3-b1217dec2778',
+    brand: 'Accord 2.0 i-VTEC 114kW',
+    img: 'http://img6.auto24.ee/auto24/320/224/86087224.jpg',
+    description: 'TODO'
+  };
+  var car2 = {
+    id: '85eada83-b14a-4cca-9ea3-b1217dec2778',
+    brand: 'Accord 2.0 i-VTEC 114kW',
+    img: 'http://img6.auto24.ee/auto24/320/224/86087224.jpg',
+    description: 'TODO'
+  };
+  var car3 = {
+    id: '85eada83-b14a-4cca-9ea3-b1217dec2778',
+    brand: 'Accord 2.0 i-VTEC 114kW',
+    img: 'http://img6.auto24.ee/auto24/320/224/86087224.jpg',
+    description: 'TODO'
+  };
 
 angular.module('application').controller('carDetailsController', ["$scope", "$http", "$stateParams","$state",
  function ($scope, $http, $stateParams, $state) {
@@ -25,6 +44,8 @@ angular.module('application').controller('carDetailsController', ["$scope", "$ht
     init();
 
     /////////////////////////////
+
+    $scope.similarcars = [car1, car2, car3];
 
     function init() {
       getCars({id: selectedCarId}).success(function (car) {

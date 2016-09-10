@@ -10,9 +10,45 @@ File Description: Place here your custom CSS styles
 */
 
 .blue-header {
-  color: #119DFD;
+  color: #019BFF
 }
 
+.orange-header {
+  color: #FBBB68;
+}
+.sk-navbar{
+  height: 70px;
+}
+.sk-logo{
+  padding: 0;
+}
+
+
+.navbar-default .navbar-nav > .sk-menu--sell >a,
+.navbar-default .navbar-nav > .sk-menu--buy > a{
+  margin-top: 8px;
+  font-size: 24px;
+}
+.navbar-default .navbar-nav > .sk-menu--sell >a:hover,
+ .navbar-default .navbar-nav > .sk-menu--buy > a:hover{
+  color: #5A5B5C;
+}
+.navbar-default .navbar-nav > .sk-menu--sell >a{
+  color: #019BFF;
+}
+
+.navbar-default .navbar-nav > .sk-menu--buy > a{
+  color: #FBBB68;
+}
+
+.sk-logo img{
+  height:60px;
+  margin-right: 20px;
+}
+.sk-logo img + img{
+  height: 48px;
+  padding-top: 10px;
+}
 /*
 ===========================
 ===========================
@@ -82,6 +118,13 @@ File Description: Place here your custom CSS styles
   height: 250px;
 }
 
+
+.sk-car-details__popular-image-title {
+  font-size: 1em;
+  font-weight: bolder;
+  color: whitesmoke
+}
+
 /*
 ===========================
 ===========================
@@ -96,19 +139,62 @@ File Description: Place here your custom CSS styles
 .sk-hero__image{
   height: 100%;
   width: 100%;
-  border: 1px solid blue;
 }
 
 .sk-hero__text {
   min-height: 100px;
   width: 100%;
-  border: 1px solid red;
-  background-color: black; /* TODO: Õige värv ja opacity */
-  opacity: 0.5;
+  /*background-color: black; /* TODO: Õige värv ja opacity */
+  /*opacity: 0.5;*/
   bottom: 0;
   color: #fff;
   position: absolute;
 }
+.sk-hero__text:before{
+  content: '';
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: 100%;
+  background: black;
+  opacity: 0.5;
+}
 
 
+.sk-hero__text h2{
+  color: #fff;
+}
 
+/* Keypoints */
+.sk-keypoint__image{
+  margin: 0 auto;
+  max-width: 128px;
+  height: auto;
+}
+
+.sk-search {
+ border-radius: 5px;
+}
+.sk-search input{
+  font-size: 18px;
+  padding: 28px;
+  border-radius: 5px;
+
+}
+.sk-search button{
+  margin: 0;
+  border: none;
+  font-size: 18px;
+  height: 58px;
+  border-radius: 5px;
+}
+
+.sk-car-placeholder{
+  margin-bottom: 20px;
+}
+
+.sk-home__popular-image-title {
+  font-size: 1.3em;
+  font-weight: bolder;
+  color: whitesmoke
+}
