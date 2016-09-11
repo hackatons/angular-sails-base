@@ -393,7 +393,9 @@
         </block>
 
         <block header="'Other cars that you might like'">
-          <cars-grid cars="similarcars"></cars-grid>
+          <image-grid ng-if="similarcars && similarcars.length > 0" values="similarcars"></image-grid>
+
+          <!--<cars-grid cars="similarcars"></cars-grid>-->
         </block>
 
       </div>

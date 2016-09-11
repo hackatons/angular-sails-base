@@ -40,3 +40,18 @@
 .colors .btn-group__circle{
   margin-right: 10px;
 }
+
+.fk-filter-advance .less{
+ display: none;
+  padding-right: 10px;
+}
+.fk-filter-advance .more{
+ display: inline-block;
+  padding-right: 10px;
+}
+.fk-filter-advance[aria-expanded="true"] .less {
+  display: inline-block;
+}
+.fk-filter-advance[aria-expanded="true"] .more {
+  display: none;
+}
