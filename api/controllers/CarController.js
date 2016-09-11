@@ -16,8 +16,8 @@ module.exports = {
         ]
       })
       .then(function(cars){
-        console.log(cars);
-        res.json('cars:', cars);
+        console.log('cars:', cars);
+        res.json(cars);
       })
       .catch(function (err){
         console.log('error', error);
