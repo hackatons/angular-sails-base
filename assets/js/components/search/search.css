@@ -1,3 +1,8 @@
 .search {
     background-color: #F8F8F8
 }
+
+.search label{
+  color: #019BFF;
+  font-weight: normal;
+}

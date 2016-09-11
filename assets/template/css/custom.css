@@ -40,9 +40,27 @@ File Description: Place here your custom CSS styles
 /* blue */
 .btn-primary,
 .btn-primary:active,
+.btn-primary:focus,
 .btn-primary:hover{
  background-color: #019BFF;
   color: #ffffff !important;
+  background-color: #019BFF;
+}
+/* info button*/
+.btn-info{
+  background-color: #fff;
+  color: #019BFF;
+}
+.btn-info span{
+  margin-right: 6px;
+  margin-left: 6px;
+}
+/* filter */
+.btn-group__circle.btn-sm {
+  border-radius: 50%;
+  width: 36px;
+  min-width: 0;
+  padding: 0;
 }
 
 .sk-navbar{
