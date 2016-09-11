@@ -12,10 +12,39 @@ File Description: Place here your custom CSS styles
 .blue-header {
   color: #019BFF
 }
-
 .orange-header {
   color: #FBBB68;
 }
+
+/*
+===========================
+===========================
+===========================
+   Buttons
+  */
+.btn{
+  border-radius: 5px;
+}
+/* white */
+.btn-default,
+.btn-default:focus,
+.btn-default:active{
+  background-color: #FFF;
+  color: #95989A !important;
+  border-color: #95989A;
+}
+.btn-default:hover{
+  background-color: #019BFF;
+  border-color: #019BFF;
+}
+/* blue */
+.btn-primary,
+.btn-primary:active,
+.btn-primary:hover{
+ background-color: #019BFF;
+  color: #ffffff !important;
+}
+
 .sk-navbar{
   height: 70px;
 }
@@ -197,4 +226,8 @@ File Description: Place here your custom CSS styles
   font-size: 1.3em;
   font-weight: bolder;
   color: whitesmoke
+}
+
+.info-image{
+  overflow: hidden;
 }

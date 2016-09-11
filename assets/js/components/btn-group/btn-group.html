@@ -1,12 +1,12 @@
 <ul class="list-inline">
     <li ng-repeat="option in $ctrl.options" class="btn-group__element">
-        <button class="btn btn-default"        
-            ng-class="{'btn-info':option.toggled, 'btn-group__circle':$ctrl.shape==='circle'}"
-            ng-style="option.style" 
+        <button class="btn btn-default"
+            ng-class="{'btn-primary':option.toggled, 'btn-group__circle':$ctrl.shape==='circle'}"
+            ng-style="option.style"
             ng-click="option.toggled = !option.toggled">
             {{option.name}}
 
             <span ng-if="!option.name && option.toggled" class="glyphicon glyphicon-ok"></span>
-        </button>        
+        </button>
     </li>
 </ul>
