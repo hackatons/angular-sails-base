@@ -18,6 +18,7 @@
     /////////////////////////////
 
     function init() {
+
       getCars({id: selectedCarId}).success(function (car) {
         car.images = typeof car.images === "string" ? car.images.split(",") : [];
         $scope.car = car;
@@ -94,6 +95,7 @@
         /*
          END OF SLIDER ACTIVATION LOL!
          */
+
       }).error(function () {
         $state.go('error404');
       })
