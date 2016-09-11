@@ -27,10 +27,10 @@ angular.module('application').component('checkout', {
             $scope.leaseTab = !$scope.leaseTab;
         };
 
-        var carData = {
-            brand: 'mazda',
-            price: 2700,
-            model: 'sorento'
+        $scope.carData = {
+            brand: this.car.brand,
+            price: this.car.price,
+            model: this.car.model
         };
 
         $scope.openCheckoutModal = function(){
@@ -44,7 +44,7 @@ angular.module('application').component('checkout', {
             //    scope: $scope // <-- I added thise,
                 resolve: {
                     carData: function () {
-                        return carData;
+                        return $scope.carData;
                     }
                 }
             });
@@ -89,5 +89,8 @@ angular.module('application').component('checkout', {
             originalHeight = $("#scroller").offset().top;
 
         }
+    },
+    bindings: {
+        car: "<"
     }
 });
