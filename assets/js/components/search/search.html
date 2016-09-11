@@ -4,73 +4,84 @@
         <label>Brand</label>
         <btn-group options="$ctrl.brands"></btn-group>
 
-        <div class="row">
-            <div class="col-md-4">
-                <div class="range-slider-wrapper">
-                  <label>Mileage</label>
-                  <range-slider min="0" max="500000" label="'KM'"></range-slider>
-                  </div>
+            <div class="row">
+                <div class="col-md-4">
+                  <div class="range-slider-wrapper">
+                    <label>Mileage</label>
+                    <range-slider label="'KM'" min="0" max="500000" model-min="$ctrl.mileageMin" model-max="$ctrl.mileageMax">
+                    </range-slider>
+                </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="range-slider-wrapper">
+                    <label>Price</label>
+                    <range-slider label="'EUR'" min="1" max="500000" model-min="$ctrl.priceMin" model-max="$ctrl.priceMax">
+                    </range-slider>
+                </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="range-slider-wrapper">
+                    <label>Year</label>
+                    <range-slider min="1970" max="2016" model-min="$ctrl.yearMin" model-max="$ctrl.yearMax">
+                    </range-slider>
+                </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <div class="range-slider-wrapper">
-                  <label>Price</label>
-                  <range-slider min="1" max="500000" label="'EUR'"></range-slider>
-                  </div>
-            </div>
-            <div class="col-md-4">
-                <div class="range-slider-wrapper">
-                  <label>Year</label>
-                  <range-slider min="1970" max="2016"></range-slider>
-                  </div>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-8">
-                <label>Color</label>
-                <btn-group class="colors" options="$ctrl.colors" shape="'circle'"></btn-group>
+            <div class="row">
+                <div class="col-md-8">>
+                    <label>Color</label>
+                    <btn-group  class="colors" options="$ctrl.colors" model="$ctrl.selectedColors" shape="'circle'">
+                    </btn-group>
 
-                <label>Features</label>
-                <btn-group options="$ctrl.features"></btn-group>
+                    <label>Features</label>
+                    <btn-group options="$ctrl.features" model="$ctrl.selectedFeatures">
+                    </btn-group>
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <label>Doors</label>
-                        <btn-group options="$ctrl.doors" shape="'circle'"></btn-group>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Doors</label>
+                            <btn-group options="$ctrl.doors" model="$ctrl.selectedDoors" shape="'circle'">
+                            </btn-group>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Seats</label>
+                            <btn-group options="$ctrl.seats" model="$ctrl.selectedSeats" shape="'circle'">
+                            </btn-group>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <label>Seats</label>
-                        <btn-group options="$ctrl.seats" shape="'circle'"></btn-group>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="range-slider-wrapper">
+                    <label>Petrol Consumption (average)</label>
+                    <range-slider label="'L'" min="0" max="20" model-min="$ctrl.petrolMin" model-max="$ctrl.petrolMax">
+                    </range-slider>
+                    </div>
+                  <div class="range-slider-wrapper">
+
+                    <label>Horsepower</label>
+                    <range-slider label="'KW'" min="0" max="500" model-min="$ctrl.horsepowerMin" model-max="$ctrl.horsepowerMax">
+                    </range-slider>
+</div>
+                    <label>Transmission</label>
+                    <btn-group options="$ctrl.transmissions" model="$ctrl.selectedTransmissions">
+                    </btn-group>
+
+                    <div class="text-right">
+                        <button class="btn btn-info" ng-click="$ctrl.search()">
+                            <span class="glyphicon glyphicon-search"></span>
+                            Search
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="range-slider-wrapper">
-                  <label>Petrol Consumption (average)</label>
-                  <range-slider min="0" max="20" label="'L'"></range-slider>
-                  </div>
+        </section>
 
-                <div class="range-slider-wrapper">
-                  <label>Horsepower</label>
-                  <range-slider min="0" max="500" label="'KW'"></range-slider>
-                  </div>
-
-                <label>Transmission</label>
-                <btn-group options="$ctrl.transmissions"></btn-group>
-
-                <div class="text-right">
-                    <button class="btn btn-info" ng-click="$ctrl.search()">
-                        <span class="glyphicon glyphicon-search"></span>
-                        Search
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEARCH RESULTS -->
-    <label>
-        {{$ctrl.searchedCars.length}} {{$ctrl.searchedCars.length === 1 ? 'beauty' : 'beauties'}} found
-    </label>
-    <image-grid values="$ctrl.searchedCars"></image-grid>
+        <!-- SEARCH RESULTS -->
+        <label>
+            {{$ctrl.searchedCars.length}} {{$ctrl.searchedCars.length === 1 ? 'beauty' : 'beauties'}} found
+        </label>
+        <image-grid values="$ctrl.searchedCars"></image-grid>
+    </div>
 </div>

@@ -15,12 +15,14 @@
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
-  '/bower_components/bootstrap/dist/css/bootstrap.min.css',
+   //'/bower_components/bootstrap/dist/css/bootstrap.min.css',
   '/bower_components/font-awesome/css/font-awesome.min.css',
   '/bower_components/angular-material/angular-material.min.css',
   '/bower_components/angularjs-slider/dist/rzslider.min.css',
+
   'styles/**/*.css',
-  'js/**/components/**/*.css'
+  'js/**/components/**/*.css',
+  // '/bower_components/jquery-modal/jquery.modal.min.css'
 ];
 
 
@@ -38,18 +40,21 @@ var jsFilesToInject = [
   '/bower_components/underscore/underscore-min.js',
 
   //angularjs
-  '/bower_components/angular/angular.min.js',
+  '/bower_components/jquery/dist/jquery.js',
+  '/bower_components/angular/angular.js',
   '/bower_components/angular-ui-router/release/angular-ui-router.min.js',
   '/bower_components/angular-animate/angular-animate.min.js',
   '/bower_components/angular-aria/angular-aria.min.js',
   '/bower_components/angular-material/angular-material.min.js',
-  '/bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js',
+  '/bower_components/angular-bootstrap/ui-bootstrap.min.js',
+  '/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
   '/bower_components/angular-sanitize/angular-sanitize.min.js',
   '/bower_components/angular-scroll-glue/src/scrollglue.js',
   '/bower_components/angular-translate/angular-translate.min.js',
   '/bower_components/angular-translate-loader-url/angular-translate-loader-url.min.js',
   '/bower_components/angularjs-slider/dist/rzslider.min.js',
-
+  '/bower_components/jquery-modal/jquery.modal.min.js',
+  '/bower_components/jquery-modal/jquery.modal.min.js',
    //angular sails
   '/bower_components/angular-sails/dist/angular-sails.min.js',
 

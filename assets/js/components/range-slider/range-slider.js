@@ -6,7 +6,9 @@ var rangeSlider = {
     bindings: {
         min: '<',
         max: '<',
-        label: '<'
+        label: '<',
+        modelMin: '=',
+        modelMax: '='
     },
     templateUrl: '/js/components/range-slider/range-slider.html',
     controller: function() {
