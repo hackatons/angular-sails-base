@@ -14,7 +14,7 @@ angular.module('application').controller('checkoutModalController', function ($u
     $ctrl.submit = function(){
         var userModel = $ctrl.user;
         var response = notificationService.getNotificationOrder(userModel.email, userModel.carBrand, userModel.carPrice, userModel.carModel);
-        $uibModalInstance.close(reponse);
+        $uibModalInstance.close("success");
     }
     <!--api/notification/order?recipient=ing.edwardyrc@gmail.com&brand=mazda&price=2700&modelname=sorento-->
 });
