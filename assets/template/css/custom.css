@@ -332,3 +332,38 @@ Checkbox
   background: #fff;
   cursor: pointer;
 }
+
+button .confirm {
+  background: red !important;
+}
+
+.haha-button-01 {
+  background-color: #FFF;
+  color: #5A5B5C !important;
+  border-color: #E8E5E5;
+}
+
+.haha-button-01:hover {
+  color: whitesmoke !important;
+}
+
+/* Checout forms*/
+.md-input-focused {  }
+md-input-container:not(.md-input-invalid) label {
+  color: #4a4b4c;
+  font-weight: normal;
+}
+md-input-container:not(.md-input-invalid).md-input-focused label {
+  color: #019BFF;
+  font-weight: normal;
+}
+md-input-container:not(.md-input-invalid) .md-input{
+ border-color: #4a4b4c;
+}
+md-input-container:not(.md-input-invalid).md-input-focused .md-input{
+  border-color: #019BFF;
+}
+
+.modal-content .btn-checkout-modal{
+  border-radius: 5px;
+}
