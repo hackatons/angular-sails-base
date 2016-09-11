@@ -1,4 +1,4 @@
-angular.module('application').controller('checkoutModalController', function ($uibModalInstance, $http, carData) {
+angular.module('application').controller('checkoutModalController', function ($uibModalInstance, notificationService, carData) {
     var $ctrl = this;
     $ctrl.header = 'One More Step';
     $ctrl.user = {
@@ -13,17 +13,8 @@ angular.module('application').controller('checkoutModalController', function ($u
 
     $ctrl.submit = function(){
         var userModel = $ctrl.user;
-        var url = '/api/notification/order?recipient=' + userModel.email + "&brand=" + userModel.carBrand
-            + "&price=" + userModel.carPrice + "&modelname=" + userModel.carModel;
-        $http({
-            method: 'POST',
-            url: url
-            }).then(function successFullCallback() {
-                $uibModalInstance.close("success1");
-            }, function errorCallback(response) {
-                $uibModalInstance.close("success2");
-            }
-            );
+        var response = notificationService.getNotificationOrder(userModel.email, userModel.carBrand, userModel.carPrice, userModel.carModel);
+        $uibModalInstance.close(reponse);
     }
     <!--api/notification/order?recipient=ing.edwardyrc@gmail.com&brand=mazda&price=2700&modelname=sorento-->
 });
