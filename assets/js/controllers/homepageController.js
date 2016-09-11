@@ -7,13 +7,14 @@ angular.module('application').controller('homepageController', function ($scope,
 
     $scope.cars = {
       popular: [],
-      recent: []
+      recent: [],
+      found: []
     };
 
     $scope.getCarByModelOrBrand = function(val) {
        carService.getCarByModelOrBrand(val).then(function(data) {
          console.log(data);
-        //  $state.go('search', data)
+         // $state.go('search', data)
        });
     };
 
