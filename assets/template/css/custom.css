@@ -332,3 +332,24 @@ Checkbox
   background: #fff;
   cursor: pointer;
 }
+
+/* Checout forms*/
+.md-input-focused {  }
+md-input-container:not(.md-input-invalid) label {
+  color: #4a4b4c;
+  font-weight: normal;
+}
+md-input-container:not(.md-input-invalid).md-input-focused label {
+  color: #019BFF;
+  font-weight: normal;
+}
+md-input-container:not(.md-input-invalid) .md-input{
+ border-color: #4a4b4c;
+}
+md-input-container:not(.md-input-invalid).md-input-focused .md-input{
+  border-color: #019BFF;
+}
+
+.modal-content .btn-checkout-modal{
+  border-radius: 5px;
+}
