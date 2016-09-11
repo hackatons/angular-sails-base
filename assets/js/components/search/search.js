@@ -1,7 +1,9 @@
 var search = {
     templateUrl: '/js/components/search/search.html',
-    controller: ['$http', function($http) {
+    controller: ['$http', '$stateParams', function($http, $stateParams) {
         var self = this;
+
+        console.log($stateParams);
 
         this.searchedCars = [];
         this.cars = [];       
