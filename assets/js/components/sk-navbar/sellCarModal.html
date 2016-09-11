@@ -10,9 +10,16 @@
     border-radius: 3px;
   }
 
+  md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+    border-color: #FDA027;
+  }
+
   .btn-checkout-modal:hover {
     background-color: #FDA027;
-    color: #FDA027;
+  }
+
+  .btn-checkout-modal:active {
+    background-color: #FDA027;
   }
 
   .modal-content {
@@ -23,6 +30,8 @@
   .msgcontainer {
     color: #95989A;
   }
+/*#019BFF*/
+
 
 </style>
 
@@ -34,25 +43,24 @@
 
     <p style="text-align: center;">
       <br>
-      With Skynda you can sell your car <b>online quickly</b> & <b>easily.</b><br><br>
+      <font color="#95989A">With Skynda you can sell your car <b>online quickly</b> & <b>easily.</b><br><br>
       Enter your cars <b>VIN number</b> and we instantly provide you with a quote.<br>
       If you like our offer, confirm it & <b>specify the location where we can pick it up.</b><br>
       After that you will receive the <b>payment for your car.</b>
       <br><br>
-      <b>That’s how simple it is.</b>
+      <b>That’s how simple it is.</b></font>
     </p>
 
   <form style="margin: 0;" role="form" name="userForm" ng-submit="complete();"
         class="form-horizontal ng-pristine ng-invalid ng-invalid-required ng-valid-email ng-valid-minlength ng-valid-maxlength ng-invalid-min ng-valid-max ng-invalid-pattern">
 
-    <div layout-gt-xs="row" class="layout-gt-xs-row">
+
       <md-input-container class="md-block md-input-has-value col-md-12">
-        <label for="input_pickup_address">Your VIN Code*</label>
-        <input ng-model="$ctrl.user.pickupaddress" class="ng-pristine ng-valid md-input ng-not-empty ng-touched"
+        <label for="input_pickup_address"><font color="#95989A">Your VIN Code*</font></label>
+        <input ng-model="$ctrl.user.pickupaddress"
                id="input_pickup_address" aria-invalid="false">
-        <div class="md-errors-spacer"></div>
       </md-input-container>
-    </div>
+
 
     <!--<div layout-gt-xs="row" class="layout-gt-xs-row">
       <md-input-container class="md-block md-input-has-value col-md-6">
