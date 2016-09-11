@@ -4,7 +4,7 @@
       <a href="#htab1" role="tab" data-toggle="tab" aria-expanded="true" ng-click="changeCheckoutTab()">
                         <span class="nav-tab-header">
                             Buy Now<br/>
-                            <span class="nav-tab-header-numbers">11 000€</span>
+                            <span class="nav-tab-header-numbers">{{carData.price}} €</span>
                         </span>
       </a>
     </li>
@@ -12,7 +12,7 @@
       <a href="#htab2" role="tab" data-toggle="tab" aria-expanded="false" ng-click="changeCheckoutTab()">
                         <span class="nav-tab-header">
                             Lease<br/>
-                            <span class="nav-tab-header-numbers">250€ / 24M</span>
+                            <span class="nav-tab-header-numbers">{{carData.price/24}}€ / 24M</span>
                         </span>
       </a>
     </li>
@@ -30,7 +30,7 @@
                     <input type="checkbox" class="checkbox checkbox-inline" checked> Car Price
                   </label>
                 </div>
-                <div class="col-md-6 text-align-right">11 000 €</div>
+                <div class="col-md-6 text-align-right">{{carData.price}} €</div>
               </div>
             </li>
             <li>
@@ -94,7 +94,7 @@
           <li>
             <div class="row">
               <div class="col-md-6"><i class="icon-check pr-10"></i> Car Price</div>
-              <div class="col-md-6 text-align-right">11 000 €</div>
+              <div class="col-md-6 text-align-right">{{carData.price}} €</div>
             </div>
           </li>
           <li>
