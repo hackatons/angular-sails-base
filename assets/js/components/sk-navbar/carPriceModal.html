@@ -1,0 +1,63 @@
+<style>
+  /*less #95989A*/
+  .checkout-modal-header {
+    color: #FBBB68;
+    padding: 10px;
+  }
+
+  .btn-checkout-modal {
+    background-color: #FBBB68;
+    border-radius: 3px;
+  }
+
+  .modal-content {
+    border-radius: 15px !important;
+    border-color: #FBBB68;
+  }
+
+  .msgcontainer {
+    color: #95989A;
+  }
+
+</style>
+
+<div class="checkout-modal-header">
+  Your Car Value <br>
+  11 500.00 EUR
+</div>
+
+<div class="container col-md-12">
+
+  <form style="margin: 0;" role="form" name="userForm" ng-submit="complete();"
+        class="form-horizontal ng-pristine ng-invalid ng-invalid-required ng-valid-email ng-valid-minlength ng-valid-maxlength ng-invalid-min ng-valid-max ng-invalid-pattern">
+
+    <div layout-gt-xs="row" class="layout-gt-xs-row">
+      <md-input-container class="md-block md-input-has-value col-md-12">
+        <label for="input_pickup_address">Pick-up Address*</label>
+        <input ng-model="$ctrl.user.pickupaddress" class="ng-pristine ng-valid md-input ng-not-empty ng-touched"
+               id="input_pickup_address" aria-invalid="false">
+        <div class="md-errors-spacer"></div>
+      </md-input-container>
+    </div>
+
+    <div layout-gt-xs="row" class="layout-gt-xs-row">
+      <md-input-container class="md-block md-input-has-value col-md-6">
+        <label for="input_delivery_date">Your Name*</label>
+        <input ng-model="$ctrl.user.deliverydate" class="ng-pristine ng-valid md-input ng-not-empty ng-touched" id="input_delivery_date" aria-invalid="false"><div class="md-errors-spacer"></div>
+        <!--<input class="md-datepicker-input md-input" aria-haspopup="true" ng-focus="ctrl.setFocused(true)" ng-blur="ctrl.setFocused(false)" id="input_delivery_date" size="3">-->
+      </md-input-container>
+      <md-input-container class="md-block md-input-has-value col-md-6">
+        <label for="input_delivery_time">Your E-mail*</label>
+        <input ng-model="$ctrl.user.deliverytime" class="ng-pristine ng-valid md-input ng-not-empty ng-touched" id="input_delivery_time" aria-invalid="false"><div class="md-errors-spacer"></div>
+      </md-input-container>
+    </div>
+
+    <div class="modal-footer">
+      <input class="btn btn-default btn-primary btn-checkout-modal" type="submit" id="submit" value="Sell"/>
+    </div>
+
+  </form>
+
+</div>
+<div class="modal-footer">
+</div>
