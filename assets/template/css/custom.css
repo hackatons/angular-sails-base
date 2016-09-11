@@ -53,6 +53,21 @@ File Description: Place here your custom CSS styles
   background-color: #fff;
   color: #019BFF;
 }
+.banner{
+  position: relative;
+}
+.btn--360{
+  min-width: 0;
+  margin-left: 10px;
+  bottom: 0;
+  border: none !important;
+}
+.btn--360 img{
+  width: 24px;
+  height: 24px;
+  display: inline;
+  margin-right: 6px;
+}
 .btn-link,
 .btn-link:hover,
 .btn-link:hover:focus,
