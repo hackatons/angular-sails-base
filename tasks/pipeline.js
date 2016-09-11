@@ -41,7 +41,7 @@ var jsFilesToInject = [
 
   //angularjs
   '/bower_components/jquery/dist/jquery.js',
-  '/bower_components/angular/angular.min.js',
+  '/bower_components/angular/angular.js',
   '/bower_components/angular-ui-router/release/angular-ui-router.min.js',
   '/bower_components/angular-animate/angular-animate.min.js',
   '/bower_components/angular-aria/angular-aria.min.js',
@@ -53,6 +53,7 @@ var jsFilesToInject = [
   '/bower_components/angular-translate/angular-translate.min.js',
   '/bower_components/angular-translate-loader-url/angular-translate-loader-url.min.js',
   '/bower_components/angularjs-slider/dist/rzslider.min.js',
+  '/bower_components/jquery-modal/jquery.modal.min.js',
   '/bower_components/jquery-modal/jquery.modal.min.js',
    //angular sails
   '/bower_components/angular-sails/dist/angular-sails.min.js',
