@@ -26,6 +26,7 @@
   }
 
   .tab-content{
+    box-shadow: none;
     &:after{
        background-color: transparent !important;
     }
@@ -34,13 +35,17 @@
     }
   }
 
-  .nav-tabs li{
-    text-align: center;
-    &:first-child{
-      border-right: 2px solid  @localblue;
-    }
+  .nav-tabs {
+        box-shadow: none;
+        li{
+            text-align: center;
+            &:first-child{
+              border-right: 2px solid  @localblue;
+            }
 
-    border-bottom: 2px solid  @localblue;    
+            border-bottom: 2px solid  @localblue; 
+        }
+      
   }
 
   a, .tab-content{
@@ -58,10 +63,8 @@
   }
 
   .btn-checkout-container{
-    text-align: right;
-    &>a{
-      margin: 0;
-      border-radius: 3px important; 
+    text-align: center;
+    &>a{    
       background-color: @localblue !important;
     }
   }
