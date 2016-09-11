@@ -9,15 +9,15 @@
       <!-- slideshow start -->
       <!-- ================ -->
       <div class="banner">
-        <button ng-click="is360View=!is360View" type="button" class="btn btn-default" aria-label="Left Align" style="position: absolute; z-index: 100">
-          <span ng-if="!is360View" class="glyphicon glyphicon-move" aria-hidden="true"></span>
-          <span ng-if="is360View" class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+        <button ng-click="is360View=!is360View" type="button" class="btn btn-primary btn--360" aria-label="Left Align" style="position: absolute; z-index: 100">
+          <span ng-if="!is360View"><img src="images/group-78@2x.png" alt=""> Look Inside</span>
+          <span ng-if="is360View"><img src="images/camera@2x.png" alt=""> View Photos</span>
         </button>
         <div class="slideshow" ng-show="!is360View">
           <div class="slider-banner-container">
             <div class="slider-banner">
               <ul>
-                <li data-transition="random" data-slotamount="7" data-masterspeed="500" data-saveperformance="on"
+                <li data-transition="random" data-slotamount="7" data-masterspeed="500" data-saveperformance="on"<!-- slideshow start -->
                     ng-repeat="slide in slides"
                     data-title="Buy a car">
 
