@@ -41,8 +41,8 @@ var NotificationController = {
     var nodemailer = require('nodemailer');
     var transporter = nodemailer.createTransport();
 
-    var logo = require("fs").readFileSync("/home/deploy/skynda.me/api/controllers/e_mail_images/skynda_logo.png");
-    var banner = require("fs").readFileSync("/home/deploy/skynda.me/api/controllers/e_mail_images/skynda_banner2.jpg");
+    var logo = require("fs").readFileSync(__dirname+"/e_mail_images/skynda_logo.png");
+    var banner = require("fs").readFileSync(__dirname+"/e_mail_images/skynda_banner2.jpg");
 
     htmlEmail = htmlEmail.replace(new RegExp('{brand}', 'g'), brand);
     htmlEmail = htmlEmail.replace(new RegExp('{modelname}', 'g'), modelname)
