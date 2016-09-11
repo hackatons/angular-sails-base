@@ -14,12 +14,11 @@ angular.module('application').component('skNavbar', {
         templateUrl: '/js/components/sk-navbar/sellCarModal.html',
         controller: function ($scope) {
           $scope.complete = function () {
-            swal('Thank you', 'Your order has been submitted. The offered price is 5699 euros.', 'success');
             modalInstance.close('a');
+            newModal();
           }
         }
       });
-
       modalInstance.result.then(function (response) {
         $scope.successMessage = response;
       }, function () {
@@ -27,9 +26,22 @@ angular.module('application').component('skNavbar', {
       });
     };
 
+    function newModal() {
+      var modalInstance2 = $uibModal.open({
+        animation: true,
+        ariaLabelledBy: 'modal-title',
+        ariaDescribedBy: 'modal-body',
+        templateUrl: '/js/components/sk-navbar/carPriceModal.html',
+        controller: function ($scope) {
+          $scope.complete = function () {
+            swal('Thank you', 'Your order has been submitted. The offered price is 11 500.00 euros.', 'success');
+            modalInstance2.close('a');
+          }
+        }
+      });
+    }
+
     this.submit = function(){
-      //var userModel = $ctrl.user;
-      console.log("HELLOOOOO");
     }
 
   }

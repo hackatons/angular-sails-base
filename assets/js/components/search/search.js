@@ -20,7 +20,9 @@ var search = {
                     return false;
 
                 // Filter by color.
-
+                // TODO: length haxor
+                if ($ctrl.selectedColors.length < 9 && $ctrl.selectedColors.indexOf(car.color) === -1)
+                    return false;
                 
                 // Filter by price.
                 if (car.price && (car.price < $ctrl.priceMin || car.price > $ctrl.priceMax))
