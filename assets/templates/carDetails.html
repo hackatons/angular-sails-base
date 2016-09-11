@@ -9,7 +9,11 @@
       <!-- slideshow start -->
       <!-- ================ -->
       <div class="banner">
-        <div class="slideshow">
+        <button ng-click="is360View=!is360View" class="btn btn-white pull-right" style="position: absolute;">
+          <p ng-if="is360View">360</p>
+          <p ng-if="!is360View">2D</p>
+        </button>
+        <div class="slideshow" ng-show="!is360View">
           <div class="slider-banner-container">
             <div class="slider-banner">
               <ul>
@@ -55,6 +59,7 @@
             </div>
           </div>
         </div>
+        <iframe ng-show="is360View" src="https://www.panono.com/p/jmr7n52eIbDn/embed?autorotate=false" width="100%" height="520" frameborder="0" scrolling="no" allowfullscreen></iframe>
       </div>
       <!-- ================ -->
       <!-- slideshow end -->
