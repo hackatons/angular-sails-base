@@ -1,63 +1,107 @@
 <div ng-controller="carDetailsController">
 
+  <sk-navbar></sk-navbar>
+
   <div class="container">
-    <div class="row">
-      <img src="https://i.gyazo.com/7d20242aa948bfc4e20fbb7063907ca5.png" alt="" style="width: 100%">
-    </div>
 
     <div class="row">
+
+      <!-- slideshow start -->
+      <!-- ================ -->
+      <div class="banner">
+        <div class="slideshow">
+          <div class="slider-banner-container">
+            <div class="slider-banner">
+              <ul>
+                <li data-transition="random" data-slotamount="7" data-masterspeed="500" data-saveperformance="on"
+                    ng-repeat="slide in slides"
+                    data-title="Buy a car">
+
+                  <!-- main image -->
+                  <img ng-src="{{slide.image}}"  alt="slidebg1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+                  <div class="tp-caption default_bg large sfr tp-resizeme" data-x="0" data-y="70" data-speed="600"
+                       data-start="1200" data-end="9400" data-endspeed="600">
+                    {{slide.brand}}
+                  </div>
+
+                  <div class="tp-caption dark_gray_bg sfl medium tp-resizeme" data-x="0" data-y="170" data-speed="600"
+                       data-start="1600" data-end="9400" data-endspeed="600"><i class="icon-check"></i>
+                  </div>
+                  <div class="tp-caption light_gray_bg sfb medium tp-resizeme" data-x="50" data-y="170" data-speed="600"
+                       data-start="1600" data-end="9400" data-endspeed="600">{{slide.text1}}
+                  </div>
+                  <div class="tp-caption dark_gray_bg sfl medium tp-resizeme" data-x="0" data-y="220" data-speed="600"
+                       data-start="1800" data-end="9400" data-endspeed="600"><i class="icon-check"></i>
+                  </div>
+                  <div class="tp-caption light_gray_bg sfb medium tp-resizeme" data-x="50" data-y="220" data-speed="600"
+                       data-start="1800" data-end="9400" data-endspeed="600">{{slide.text2}}
+                  </div>
+                  <div class="tp-caption dark_gray_bg sfl medium tp-resizeme" data-x="0" data-y="270" data-speed="600"
+                       data-start="2000" data-end="9400" data-endspeed="600"><i class="icon-check"></i>
+                  </div>
+                  <div class="tp-caption light_gray_bg sfb medium tp-resizeme" data-x="50" data-y="270" data-speed="600"
+                       data-start="2000" data-end="9400" data-endspeed="600">{{slide.text3}}
+                  </div>
+                </li>
+              </ul>
+              <div class="tp-bannertimer tp-bottom"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ================ -->
+      <!-- slideshow end -->
+
+      <br/>
 
       <!-- LEFT COLUMN -->
       <div class="col col-md-7">
-
-        <block header="'What\'s The Model About?'">
-          <icon-block icon="'/images/group-114.png'" text="'75 000km'"></icon-block>
-          <icon-block icon="'/images/group-115.png'" text="'Automatic'"></icon-block>
-          <icon-block icon="'/images/group-116.png'" text="'3.0 (225 kW)'"></icon-block>
-          <icon-block icon="'/images/group-117.png'" text="'Front Wheel Drive'"></icon-block>
-          <icon-block icon="'/images/group-119.png'" text="'2 doors 5 seats'"></icon-block>
-          <icon-block icon="'/images/group-120.png'" text="'Dark Blue'"></icon-block>
-          <icon-block icon="'/images/group-121.png'" text="'Black'"></icon-block>
+        <block header="'Overview'">
+          <br/>
+          <icon-block icon="'/images/group-114.png'" text="car.mileage"></icon-block>
+          <icon-block icon="'/images/group-115.png'" text="car.transmission"></icon-block>
+          <icon-block icon="'/images/group-116.png'" text="car.engine"></icon-block>
+          <icon-block icon="'/images/group-117.png'" text="car.drive"></icon-block>
+          <icon-block icon="'/images/group-119.png'" text="car.doors + ' doors ' + car.seats + ' seats'"></icon-block>
+          <icon-block icon="'/images/group-120.png'" text="car.color"></icon-block>
+          <!--<icon-block icon="'/images/group-121.png'" text="'Black'"></icon-block>-->
         </block>
 
         <block header="'What\'s this model about?'">
-          {{block1.description}}
+          {{car.descriptionBrand}}
         </block>
 
         <block header="'We have it in excellent condition'">
-          {{block2.description}}
+          {{car.descriptionBrand}}
         </block>
 
         <block header="'Nice features'">
-          {{block3.description}}
-        </block>
-
-        <block header="'Car History'">
           <div class="col col-md-4" style="padding: 5px 0;">
-            <img src="/images/ok.png" width="24" class="sk-details__icon-list-image" />
+            <img src="/images/ok.png" width="24" class="sk-details__icon-list-image"/>
             Steering Wheel Controls
           </div>
           <div class="col col-md-4" style="padding: 5px 0;">
-            <img src="/images/ok.png" width="24" class="sk-details__icon-list-image" />
+            <img src="/images/ok.png" width="24" class="sk-details__icon-list-image"/>
             Paddle Shifters
           </div>
           <div class="col col-md-4" style="padding: 5px 0;">
-            <img src="/images/ok.png" width="24" class="sk-details__icon-list-image" />
+            <img src="/images/ok.png" width="24" class="sk-details__icon-list-image"/>
             Premium Lights
           </div>
           <div class="col col-md-4" style="padding: 5px 0;">
-            <img src="/images/ok.png" width="24" class="sk-details__icon-list-image" />
+            <img src="/images/ok.png" width="24" class="sk-details__icon-list-image"/>
             Turbocharger
           </div>
           <div class="col col-md-4" style="padding: 5px 0;">
-            <img src="/images/ok.png" width="24" class="sk-details__icon-list-image" />
+            <img src="/images/ok.png" width="24" class="sk-details__icon-list-image"/>
             Parking Sensors
           </div>
         </block>
 
         <block header="'Car History'">
           <div class="col col-md-4" style="padding: 5px 0;">
-            <img src="/images/diploma_1.png" width="24" class="sk-details__icon-list-image" />
+            <img src="/images/diploma_1.png" width="24" class="sk-details__icon-list-image"/>
             No Problems Found
           </div>
           <div class="col col-md-4" style="padding: 5px 0;">
@@ -67,17 +111,20 @@
 
         <block header="'Petrol Consumption'">
           <div class="col col-md-4" style="padding: 5px 0;">
-            <img src="/images/gas_station@2x.png" class="sk-details__icon-list-image" />
+            <img src="/images/gas_station@2x.png" class="sk-details__icon-list-image"/>
           </div>
           <div class="col col-md-4" style="padding: 5px 0;">
             <div class="row">
-              <label>City: </label> 7.5 l / 100 km
+              <div class="col col-md-6"><label>City: </label></div>
+              <div class="col col-md-6">7.5 l / 100 km</div>
             </div>
             <div class="row">
-              <label>Highway: </label>  6.5 l / 100 km
+              <div class="col col-md-6"><label>Highway: </label></div>
+              <div class="col col-md-6">6.5 l / 100 km</div>
             </div>
             <div class="row">
-              <label>Average: </label>  7.0 l / 100 km
+              <div class="col col-md-6"><label>Average: </label></div>
+              <div class="col col-md-6">7.0 l / 100 km</div>
             </div>
           </div>
         </block>
@@ -94,7 +141,7 @@
           <div class="col col-md-6" style="padding: 5px 0;">
             <div class="row">
               <div class="col col-md-6"><label>Doors: </label></div>
-              <div class="col col-md-6">4</div>
+              <div class="col col-md-6">{{car.doors}}</div>
             </div>
           </div>
           <div class="col col-md-6" style="padding: 5px 0;">
@@ -138,7 +185,7 @@
           <div class="col col-md-6" style="padding: 5px 0;">
             <div class="row">
               <div class="col col-md-6"><label>Horsepower</label></div>
-              <div class="col col-md-6">240</div>
+              <div class="col col-md-6">{{car.horsepower}}</div>
             </div>
           </div>
           <div class="col col-md-6" style="padding: 5px 0;">
@@ -161,68 +208,200 @@
           </div>
           <div class="col col-md-6" style="padding: 5px 0;">
             <div class="row">
-              <div class="col col-md-6"><label>Powr train</label></div>
+              <div class="col col-md-6"><label>Power train</label></div>
               <div class="col col-md-6">Gas</div>
             </div>
           </div>
         </block>
 
         <block header="'Safety'">
-          <!-- TODO: Safety -->
           <div class="sk-details__stars-outer-container">
             <div class="sk-details__stars-inner-container">
-              <img class="sk-details__star" src="/images/star@2x.png" />
-              <img class="sk-details__star" src="/images/star@2x.png" />
-              <img class="sk-details__star" src="/images/star@2x.png" />
-              <img class="sk-details__star" src="/images/star@2x.png" />
-              <img class="sk-details__star" src="/images/star@2x.png" />
+              <img class="sk-details__star" src="/images/star@2x.png"/>
+              <img class="sk-details__star" src="/images/star@2x.png"/>
+              <img class="sk-details__star" src="/images/star@2x.png"/>
+              <img class="sk-details__star" src="/images/star@2x.png"/>
+              <img class="sk-details__star" src="/images/star@2x.png"/>
 
-              <img class="sk-details__stars_euroncap" src="/images/image-4@2x.png" />
+              <img class="sk-details__stars_euroncap" src="/images/image-4@2x.png"/>
             </div>
           </div>
-
         </block>
 
         <block header="'Our Certified Inspector\'s Report'">
-          <!-- TODO: our certified Inspectors report -->
+          <div class="row">
+            <div class="col col-md-4"><label class="sk-details__certified_developer">Mr. Happy</label></div>
+            <div class="col col-md-3"><img src="/images/happy.png" width="130" alt="happy"></div>
+            <div class="col col-md-5">
+              <button class="btn btn-default sk-details__certified_have_a_question">Have a question?</button>
+            </div>
+          </div>
+
+          <div class="row">
+            <h4>Category 1</h4>
+            <div class="row">
+              <div class="col col-md-6" style="padding: 5px 0;">
+                <img src="/images/ok.png" width="24" class="sk-details__icon-list-image"/>
+                Automatic transmission flawless in cold temperature
+              </div>
+              <div class="col col-md-6" style="padding: 5px 0;">
+                <img src="/images/ok.png" width="24" class="sk-details__icon-list-image"/>
+                Steering wheel centered
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-md-6" style="padding: 5px 0;">
+                <img src="/images/ok.png" width="24" class="sk-details__icon-list-image"/>
+                Steering wheel centered
+              </div>
+              <div class="col col-md-6" style="padding: 5px 0;">
+                <img src="/images/cancel.png" width="24" class="sk-details__icon-list-image"/>
+                Automatic transmission flawless in cold temperature
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-md-6" style="padding: 5px 0;">
+                <img src="/images/ok.png" width="24" class="sk-details__icon-list-image"/>
+                Automatic transmission flawless in cold temperature
+              </div>
+              <div class="col col-md-6" style="padding: 5px 0;">
+                <img src="/images/ok.png" width="24" class="sk-details__icon-list-image"/>
+                Steering wheel centered
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-md-11">
+                <button class="btn btn-white pull-right">Show all</button>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <h4>Category 1</h4>
+            <div class="row">
+              <div class="col col-md-6" style="padding: 5px 0;">
+                <img src="/images/ok.png" width="24" class="sk-details__icon-list-image"/>
+                Automatic transmission flawless in cold temperature
+              </div>
+              <div class="col col-md-6" style="padding: 5px 0;">
+                <img src="/images/ok.png" width="24" class="sk-details__icon-list-image"/>
+                Steering wheel centered
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-md-6" style="padding: 5px 0;">
+                <img src="/images/ok.png" width="24" class="sk-details__icon-list-image"/>
+                Steering wheel centered
+              </div>
+              <div class="col col-md-6" style="padding: 5px 0;">
+                <img src="/images/cancel.png" width="24" class="sk-details__icon-list-image"/>
+                Automatic transmission flawless in cold temperature
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-md-6" style="padding: 5px 0;">
+                <img src="/images/cancel.png" width="24" class="sk-details__icon-list-image"/>
+                Automatic transmission flawless in cold temperature
+              </div>
+              <div class="col col-md-6" style="padding: 5px 0;">
+                <img src="/images/ok.png" width="24" class="sk-details__icon-list-image"/>
+                Steering wheel centered
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-md-11">
+                <button class="btn btn-white pull-right">Show all</button>
+              </div>
+            </div>
+
+          </div>
         </block>
 
         <block header="'Skynda Care'">
-          <!-- TODO: skynda care -->
+          <div class="row">
+            <div class="col col-md-4" style="text-align: center">
+              <img class="sk-details__icon" src="/images/group-124.png"/>
+              <h5>Vehicle Protection</h5>
+              <section>Award-winning repair coverage</section>
+            </div>
+            <div class="col col-md-4" style="text-align: center">
+              <img class="sk-details__icon" src="/images/group-125.png"/>
+              <h5>Vehicle Protection</h5>
+              <section>Award-winning repair coverage</section>
+            </div>
+            <div class="col col-md-4" style="text-align: center">
+              <img class="sk-details__icon" src="/images/group-126.png"/>
+              <h5>Vehicle Protection</h5>
+              <section>Award-winning repair coverage</section>
+            </div>
+            <div class="col col-md-4" style="text-align: center">
+              <img class="sk-details__icon" src="/images/group-127.png"/>
+              <h5>Vehicle Protection</h5>
+              <section>Award-winning repair coverage</section>
+            </div>
+            <div class="col col-md-4" style="text-align: center">
+              <img class="sk-details__icon" src="/images/group-128.png"/>
+              <h5>Vehicle Protection</h5>
+              <section>Award-winning repair coverage</section>
+            </div>
+            <div class="col col-md-4" style="text-align: center">
+              <img class="sk-details__icon" src="/images/group-129.png"/>
+              <h5>Vehicle Protection</h5>
+              <section>Award-winning repair coverage</section>
+            </div>
+          </div>
         </block>
 
         <block header="'Reviews'">
-          <!-- TODO: Reviews -->
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col col-md-6">
+                  <label style="font-size: 28px; font-weight: bolder; color: orangered">WHATCAR?</label>
+                </div>
+                <div class="col col-md-6">
+                  <div style="float: right">
+                    <img class="sk-details__star" src="/images/star.png"/>
+                    <img class="sk-details__star" src="/images/star.png"/>
+                    <img class="sk-details__star" src="/images/star.png"/>
+                    <img class="sk-details__star" src="/images/star.png"/>
+                    <img class="sk-details__star" src="/images/star-1.png"/>
+                  </div>
+                </div>
+              </div>
+              <br/>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s <br>
+              <br/>
+              <button style="margin: -15px; border-radius: 5px 0 0 0;" class="btn btn-white btn-sm pull-right">Read
+                More
+              </button>
+            </div>
+          </div>
         </block>
-
 
         <block header="'Other cars that you might like'">
-          <!-- TODO: Other cars that you might like -->
+          <cars-grid cars="similarcars"></cars-grid>
         </block>
-
-          <block header="block10.header">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-              Why do we use it?
-              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-
-              Where does it come from?
-              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-          </block>
 
       </div>
 
-      <!-- RIGHT COLUMN -->
       <div class="col col-md-5">
-
         <checkout></checkout>
+      </div>
+    </div>
 
-       </div>
-    </div>
-    </div>
+
+  </div>
+
+
 </div>
 
 <!-- Button trigger modal -->

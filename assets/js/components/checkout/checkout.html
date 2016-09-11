@@ -1,124 +1,146 @@
-
-  <div id="scroller" class="checkout-container">
-    <ul class="nav nav-tabs" role="tablist">
-      <li class="active col-md-6">
-        <a href="#htab1" role="tab" data-toggle="tab" aria-expanded="true" ng-click="changeCheckoutTab()">
+<div id="scroller" class="checkout-container">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active col-md-6">
+      <a href="#htab1" role="tab" data-toggle="tab" aria-expanded="true" ng-click="changeCheckoutTab()">
                         <span class="nav-tab-header">
                             Buy Now<br/>
                             <span class="nav-tab-header-numbers">11 000€</span>
                         </span>
-        </a>
-      </li>
-      <li class="col-md-6">
-        <a href="#htab2" role="tab" data-toggle="tab" aria-expanded="false" ng-click="changeCheckoutTab()">
+      </a>
+    </li>
+    <li class="col-md-6">
+      <a href="#htab2" role="tab" data-toggle="tab" aria-expanded="false" ng-click="changeCheckoutTab()">
                         <span class="nav-tab-header">
                             Lease<br/>
                             <span class="nav-tab-header-numbers">250€ / 24M</span>
                         </span>
-        </a>
-      </li>
-    </ul>
+      </a>
+    </li>
+  </ul>
 
-    <div class="tab-content">
-      <li class="tab-pane fade active in" id="htab1">
-        <h1 class="text-center">Buy Now</h1>
-        <div class="space-bottom"></div>
-        <div class="row">
-          <div class="col-md-12">
-            <ul class="list-icons">
-              <li>
-                <div class="row">
-                  <div class="col-md-6"><i class="icon-check pr-10"></i> Car Price</div>
-                  <div class="col-md-6 text-align-right">11 000 €</div>
-                </div>
-              </li>
-              <li>
-                <div class="row">
-                  <div class="col-md-6"><i class="icon-check pr-10"></i> Insurance by Salva</div>
-                  <div class="col-md-6 text-align-right">20 €</div>
-                </div>
-              </li>
-              <li>
-                <div class="row">
-                  <div class="col-md-6"><i class="icon-check pr-10"></i>  Kasko by Salva</div>
-                  <div class="col-md-6 text-align-right">40 €</div>
-                </div>
-              </li>
-              <li>
-                <div class="row">
-                  <div class="col-md-6"><i class="icon-check pr-10"></i> Full Tank on Delivery</div>
-                  <div class="col-md-6 text-align-right">70 €</div>
-                </div>
-              </li>
-              <li>
-                <div class="row">
-                  <div class="col-md-6"><i class="icon-check pr-10"></i> Other</div>
-                  <div class="col-md-6 text-align-right">18 €</div>
-                </div>
-              </li>
-              <li>
-                <div class="row">
-                  <div class="col-md-6"><i class="icon-check pr-10"></i> Service</div>
-                  <div class="col-md-6 text-align-right">109 €</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li class="tab-pane fade" id="htab2">
-        <h1 class="text-center">Lease</h1>
-        <div class="space-bottom"></div>
-        <div class="row">
+  <div class="tab-content">
+    <li class="tab-pane fade active in" id="htab1">
+      <div class="row">
+        <div class="col-md-12">
           <ul class="list-icons">
             <li>
               <div class="row">
-                <div class="col-md-6"><i class="icon-check pr-10"></i> Car Price</div>
+                <div class="col-md-6">
+                  <label>
+                    <input type="checkbox" class="checkbox checkbox-inline" checked> Car Price
+                  </label>
+                </div>
                 <div class="col-md-6 text-align-right">11 000 €</div>
               </div>
             </li>
             <li>
               <div class="row">
-                <div class="col-md-6"><i class="icon-check pr-10"></i> Insurance by Salva</div>
-                <div class="col-md-6 text-align-right">0 €</div>
+                <div class="col-md-6">
+                  <label>
+                    <input type="checkbox" class="checkbox checkbox-inline" > Insurance by Salva
+                  </label>
+                </div>
+                <div class="col-md-6 text-align-right">20 €</div>
               </div>
             </li>
             <li>
               <div class="row">
-                <div class="col-md-6"><i class="icon-check pr-10"></i>  Kasko by Salva</div>
-                <div class="col-md-6 text-align-right">0 €</div>
+                <div class="col-md-6">
+                  <label>
+                    <input type="checkbox" class="checkbox checkbox-inline" > Kasko by Salva
+                  </label>
+                </div>
+                <div class="col-md-6 text-align-right">40 €</div>
               </div>
             </li>
             <li>
               <div class="row">
-                <div class="col-md-6"><i class="icon-check pr-10"></i> Full Tank on Delivery</div>
-                <div class="col-md-6 text-align-right">0 €</div>
+                <div class="col-md-6">
+                  <label>
+                    <input type="checkbox" class="checkbox checkbox-inline" checked> Full Tank on Delivery
+                  </label>
+                </div>
+                <div class="col-md-6 text-align-right">70 €</div>
               </div>
             </li>
             <li>
               <div class="row">
-                <div class="col-md-6"><i class="icon-check pr-10"></i> Other</div>
-                <div class="col-md-6 text-align-right">0 €</div>
+                <div class="col-md-6">
+                  <label>
+                    <input type="checkbox" class="checkbox checkbox-inline" > Other
+                  </label>
+                </div>
+
+                <div class="col-md-6 text-align-right">18 €</div>
               </div>
             </li>
             <li>
               <div class="row">
-                <div class="col-md-6"><i class="icon-check pr-10"></i> Service</div>
-                <div class="col-md-6 text-align-right">0 €</div>
+                <div class="col-md-6">
+                  <label>
+                    <input type="checkbox" class="checkbox checkbox-inline" checked> Service
+                  </label>
+                </div>
+                <div class="col-md-6 text-align-right">109 €</div>
               </div>
             </li>
           </ul>
-          <div class="col-md-12">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere hic qui non placeat ad explicabo dignissimos amet iusto veniam!</p>
-            <p>Quo expedita tempore modi minima at adipisci saepe excepturi alias consequuntur sunt asperiores enim ut assumenda hic vitae, odio deleniti illo, veniam quas!</p>
-          </div>
         </div>
-      </li>
-    </div>
-    <div class="btn-checkout-container" ng-show="!leaseTab">
-      <a ng-click="openCheckoutModal()" class="btn btn-default">Buy Now</a>
-    </div>
-    <div class="btn-checkout-container" ng-show="leaseTab">
-      <a ng-click="openCheckoutModal()" class="btn btn-default">Lease</a>
-    </div>
+      </div>
+    </li>
+    <li class="tab-pane fade" id="htab2">
+      <div class="row">
+        <ul class="list-icons">
+          <li>
+            <div class="row">
+              <div class="col-md-6"><i class="icon-check pr-10"></i> Car Price</div>
+              <div class="col-md-6 text-align-right">11 000 €</div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-md-6"><i class="icon-check pr-10"></i> Insurance by Salva</div>
+              <div class="col-md-6 text-align-right">0 €</div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-md-6"><i class="icon-check pr-10"></i> Kasko by Salva</div>
+              <div class="col-md-6 text-align-right">0 €</div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-md-6"><i class="icon-check pr-10"></i> Full Tank on Delivery</div>
+              <div class="col-md-6 text-align-right">0 €</div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-md-6"><i class="icon-check pr-10"></i> Other</div>
+              <div class="col-md-6 text-align-right">0 €</div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-md-6"><i class="icon-check pr-10"></i> Service</div>
+              <div class="col-md-6 text-align-right">0 €</div>
+            </div>
+          </li>
+        </ul>
+        <div class="col-md-12">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere hic qui non placeat ad explicabo
+            dignissimos amet iusto veniam!</p>
+          <p>Quo expedita tempore modi minima at adipisci saepe excepturi alias consequuntur sunt asperiores enim ut
+            assumenda hic vitae, odio deleniti illo, veniam quas!</p>
+        </div>
+      </div>
+    </li>
   </div>
+  <div class="btn-checkout-container" ng-show="!leaseTab">
+    <a href="page-services.html" class="btn btn-default">Checkout</a>
+  </div>
+  <div class="btn-checkout-container" ng-show="leaseTab">
+    <a href="page-services.html" class="btn btn-default">Lease</a>
+  </div>
+</div>

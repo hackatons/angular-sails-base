@@ -1,4 +1,6 @@
-var legislatorApp = angular.module('application', ['ngMaterial', 'ui.router' , 'ngSails', 'luegg.directives', 'pascalprecht.translate', 'skynda.search-controller', 'ui.bootstrap'])
+
+var legislatorApp = angular.module('application', ['ngMaterial', 'ui.router' , 'ngSails',
+  'luegg.directives', 'pascalprecht.translate', 'skynda.search', 'ui.bootstrap']);
 
 
 legislatorApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider, $translateProvider) {
@@ -23,12 +25,16 @@ legislatorApp.config(function ($stateProvider, $urlRouterProvider, $locationProv
       templateUrl: '/templates/login.html'
     })
     .state('car-details', {
-      url: '/car-details',
+      url: '/car-details/:id',
       templateUrl: '/templates/carDetails.html'
     })
     .state('search', {
       url: '/search',
-      templateUrl: '/templates/search.html'
+      component: 'search'
+    })
+    .state('error404', {
+      url: '/error404',
+      templateUrl: '/templates/error404.html'
     });
 
   $urlRouterProvider.otherwise('/');
