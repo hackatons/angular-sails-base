@@ -99,7 +99,7 @@
       }).error(function () {
         $state.go('error404');
       })
-        .then(getSimilarCars());
+      .then(getSimilarCars());
     }
 
     function getCars(params) {
@@ -119,9 +119,9 @@
           var car = cars[i];
           $scope.similarcars.push({
             id: car.id,
-            brand: car.brand,
-            img: car.images.split(',')[0],
-            description: car.descriptionBrand
+            title: car.brand,
+            src: car.images.split(',')[1],
+            href: '/car-details/' + car.id
           });
         }
       })

@@ -70,13 +70,15 @@
 
     <div class="row">
       <h2 ng-show="cars.found.length > 0">Total found: {{cars.found.length}}</h2>
-      <div class="col-md-4" style="margin-bottom: 10px;" ng-repeat="car in cars.found">
-        <info-image
-          src="car.img"
-          href="'/car-details/' + car.id">
-          <h2 class="sk-home__popular-image-title">{{car.brand}}</h2>
-        </info-image>
-      </div>
+      <image-grid ng-if="cars.found.length > 0" values="cars.found"></image-grid>
+
+      <!--<div class="col-md-4" style="margin-bottom: 10px;" ng-repeat="car in cars.found">-->
+        <!--<info-image-->
+          <!--src="car.img"-->
+          <!--href="'/car-details/' + car.id">-->
+          <!--<h2 class="sk-home__popular-image-title">{{car.brand}}</h2>-->
+        <!--</info-image>-->
+      <!--</div>-->
     </div>
 
     <div class="row" ng-show="cars.found.length > 0">
@@ -93,13 +95,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="row">
-            <div class="col-md-4" style="margin-bottom: 10px;" ng-repeat="car in cars.popular">
-              <info-image
-                src="car.img"
-                href="'/car-details/' + car.id">
-                <h2 class="sk-home__popular-image-title">{{car.brand}}</h2>
-              </info-image>
-            </div>
+            <image-grid ng-if="cars.popular.length > 0" values="cars.popular"></image-grid>
           </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
       </div>
@@ -115,20 +111,11 @@
         <div class="row">
           <div class="col-md-12">
             <div class="row">
-
               <image-grid ng-if="cars.recent.length > 0" values="cars.recent"></image-grid>
-              <!--<div class="col-md-4" style="margin-bottom: 10px;" ng-repeat="car in cars.recent">-->
-                <!--<info-image-->
-                  <!--src="car.img"-->
-                  <!--href="'/car-details/' + car.id">-->
-                  <!--<h2 class="sk-home__popular-image-title">{{car.brand}}</h2>-->
-                <!--</info-image>-->
-              <!--</div>-->
             </div>
           </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
       </div>
-
 
       <hr>
 

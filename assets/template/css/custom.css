@@ -103,11 +103,11 @@ a:hover {
   color: #5A5B5C;
 }
 .navbar-default .navbar-nav > .sk-menu--sell >a{
-  color: #019BFF;
+  color: #FBBB68;
 }
 
 .navbar-default .navbar-nav > .sk-menu--buy > a{
-  color: #FBBB68;
+  color: #019BFF;
 }
 
 .sk-logo img{
