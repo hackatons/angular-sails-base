@@ -53,9 +53,16 @@ File Description: Place here your custom CSS styles
   background-color: #fff;
   color: #019BFF;
 }
-.btn-info span{
+.sk-btn--search{
+  background: none;
+  min-width: 100px;
+  line-height: 18px;
+}
+.sk-btn--search span{
   margin-right: 6px;
   margin-left: 6px;
+  font-size: 18px;
+  vertical-align: text-bottom;
 }
 /* filter */
 .btn-group__circle.btn-sm {
@@ -64,7 +71,6 @@ File Description: Place here your custom CSS styles
   height: 38px;
   min-width: 0;
   padding: 0;
-  margin-right: 10px;
 }
 
 .sk-navbar{
