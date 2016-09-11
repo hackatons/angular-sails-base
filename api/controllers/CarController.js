@@ -7,7 +7,7 @@
 
 module.exports = {
   getBybrandOrModel: function (req, res) {
-    var term = req.param('term');
+      var term = req.param('term');
 
     car.find({
         or: [

@@ -15,8 +15,7 @@ angular.module('application').controller('checkoutModalController', function ($u
         var userModel = $ctrl.user;
         var response = notificationService.getNotificationOrder(userModel.email, userModel.carBrand, userModel.carPrice, userModel.carModel);
         $uibModalInstance.close("success");
-    }
-    <!--api/notification/order?recipient=ing.edwardyrc@gmail.com&brand=mazda&price=2700&modelname=sorento-->
+    };    
 });
 
 angular.module('application').component('checkout', {
@@ -40,8 +39,7 @@ angular.module('application').component('checkout', {
                 ariaDescribedBy: 'modal-body',
                 templateUrl: '/js/components/checkout/modal/checkoutModal.html',
                 controller: 'checkoutModalController',
-                controllerAs: '$ctrl',
-            //    scope: $scope // <-- I added thise,
+                controllerAs: '$ctrl',            
                 resolve: {
                     carData: function () {
                         return $scope.carData;
@@ -51,6 +49,11 @@ angular.module('application').component('checkout', {
 
             modalInstance.result.then(function (response) {
                 $scope.successMessage = response;
+
+                if($scope.successMessage == "success"){
+                    swal("Good job!", "You have bought an excellent car!", "success");
+                }
+                 
             }, function () {
 
             });
