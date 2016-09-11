@@ -6,23 +6,29 @@
 
         <div class="row">
             <div class="col-md-4">
-                <label>Mileage</label>
-                <range-slider min="0" max="500000" label="'KM'"></range-slider>
+                <div class="range-slider-wrapper">
+                  <label>Mileage</label>
+                  <range-slider min="0" max="500000" label="'KM'"></range-slider>
+                  </div>
             </div>
             <div class="col-md-4">
-                <label>Price</label>
-                <range-slider min="1" max="500000" label="'EUR'"></range-slider>
+                <div class="range-slider-wrapper">
+                  <label>Price</label>
+                  <range-slider min="1" max="500000" label="'EUR'"></range-slider>
+                  </div>
             </div>
             <div class="col-md-4">
-                <label>Year</label>
-                <range-slider min="1970" max="2016"></range-slider>
+                <div class="range-slider-wrapper">
+                  <label>Year</label>
+                  <range-slider min="1970" max="2016"></range-slider>
+                  </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-8">
                 <label>Color</label>
-                <btn-group options="$ctrl.colors" shape="'circle'"></btn-group>
+                <btn-group class="colors" options="$ctrl.colors" shape="'circle'"></btn-group>
 
                 <label>Features</label>
                 <btn-group options="$ctrl.features"></btn-group>
@@ -39,11 +45,15 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <label>Petrol Consumption (average)</label>
-                <range-slider min="0" max="20" label="'L'"></range-slider>
+                <div class="range-slider-wrapper">
+                  <label>Petrol Consumption (average)</label>
+                  <range-slider min="0" max="20" label="'L'"></range-slider>
+                  </div>
 
-                <label>Horsepower</label>
-                <range-slider min="0" max="500" label="'KW'"></range-slider>
+                <div class="range-slider-wrapper">
+                  <label>Horsepower</label>
+                  <range-slider min="0" max="500" label="'KW'"></range-slider>
+                  </div>
 
                 <label>Transmission</label>
                 <btn-group options="$ctrl.transmissions"></btn-group>

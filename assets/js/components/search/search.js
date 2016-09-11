@@ -6,7 +6,7 @@ var search = {
         console.log($stateParams);
 
         this.searchedCars = [];
-        this.cars = [];       
+        this.cars = [];
 
         getCars().then(function(response) {
             self.cars = response.data;
@@ -14,7 +14,7 @@ var search = {
 
         this.search = function() {
             // Filter from all cars list.
-            var filteredCars = self.cars.filter(function(car) { 
+            var filteredCars = self.cars.filter(function(car) {
                 return car;
             });
 
@@ -23,7 +23,7 @@ var search = {
                 return {
                     title: car.brand,
                     description: car.descriptionBrand,
-                    src: car.images.split(',')[0]                    
+                    src: car.images.split(',')[0]
                 };
             });
         };
@@ -60,7 +60,7 @@ var search = {
             { id: 4, style: { 'background-color': '#3AC99D' } },
             { id: 5, style: { 'background-color': '#44DE62' } },
             { id: 6, style: { 'background-color': '#15A6DB' } },
-            { id: 7, style: { 'background-color': '#FFFFFF' } },
+            { id: 7, style: { 'background-color': '#FFFFFF' } , extraClass: 'btn-inverse' },
             { id: 8, style: { 'background-color': '#000000' } }
         ];
 
