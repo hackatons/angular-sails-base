@@ -19,18 +19,20 @@ angular.module('application').controller('homepageController', function ($scope,
     carService.getCars().success(function (cars) {
       $scope.cars.popular.length = 0;
       $scope.cars.recent.length = 0;
-      for (var i = 0; i < cars.length; i++) {
+      var carsToTake = 6;
+      for (var i = 0; i < cars.length && i < carsToTake; i++) {
+        var car = cars[i];
         $scope.cars.popular.push({
-          id: cars[i].id,
-          brand: cars[i].brand,
-          img: cars[i].images.split(',')[0],
-          description: 'TODO'
+          id: car.id,
+          brand: car.brand,
+          img: car.images.split(',')[0],
+          description: car.descriptionBrand
         });
         $scope.cars.recent.push({
-          id: cars[i].id,
-          brand: cars[i].brand,
-          img: cars[i].images.split(',')[0],
-          description: 'TODO'
+          id: car.id,
+          brand: car.brand,
+          img: car.images.split(',')[0],
+          description: car.descriptionBrand
         });
       }
     });

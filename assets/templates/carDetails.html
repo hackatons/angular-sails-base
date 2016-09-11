@@ -2,57 +2,57 @@
 
   <sk-navbar></sk-navbar>
 
-
-  <!-- banner start -->
-  <!-- ================ -->
-  <div class="banner">
-    <div class="slideshow">
-      <div class="slider-banner-container">
-        <div class="slider-banner">
-          <ul>
-            <li data-transition="random" data-slotamount="7" data-masterspeed="500" data-saveperformance="on"
-                ng-repeat="slide in slides"
-                data-title="Buy a car">
-
-              <!-- main image -->
-              <img ng-src="{{slide.image}}"  alt="slidebg1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-
-              <div class="tp-caption default_bg large sfr tp-resizeme"
-                   data-x="0"
-                   data-y="70"
-                   data-speed="600"
-                   data-start="1200"
-                   data-end="9400"
-                   data-endspeed="600"> {{slide.brand}}
-              </div>
-            </li>
-          </ul>
-          <div class="tp-bannertimer tp-bottom"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-  <!--<info-image-->
-    <!--src="'http://www.telegraph.co.uk/content/dam/motoring2/2015/12/03/porsche-panamera-front-1-xlarge-xlarge_trans++5yQLQqeH37t50SCyM4-zeBU&#45;&#45;41c5Cba04Sh5SZbNZ8.jpg'"-->
-    <!--href="">-->
-    <!--<h2 style="font-size: 2.4em; font-weight: bolder; color: whitesmoke">{{car.brand}}</h2>-->
-
-    <!--<div class="container">-->
-      <!--Bacon ipsum dolor amet corned beef short ribs shoulder sirloin strip steak swine short loin.-->
-      <!--Fatback capicola porchetta, cow corned beef rump prosciutto sausage kielbasa shankle picanha.-->
-      <!--Ham hock hamburger kielbasa pancetta swine venison. T-bone sausage venison kevin chuck-->
-      <!--tenderloin picanha turducken biltong strip steak cupim frankfurter meatloaf turkey.-->
-      <!--Hamburger andouille prosciutto flank bacon salami. Swine ground round doner corned beef pork ribeye.-->
-    <!--</div>-->
-  <!--</info-image>-->
-
   <div class="container">
 
     <div class="row">
+
+      <!-- slideshow start -->
+      <!-- ================ -->
+      <div class="banner">
+        <div class="slideshow">
+          <div class="slider-banner-container">
+            <div class="slider-banner">
+              <ul>
+                <li data-transition="random" data-slotamount="7" data-masterspeed="500" data-saveperformance="on"
+                    ng-repeat="slide in slides"
+                    data-title="Buy a car">
+
+                  <!-- main image -->
+                  <img ng-src="{{slide.image}}"  alt="slidebg1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+                  <div class="tp-caption default_bg large sfr tp-resizeme" data-x="0" data-y="70" data-speed="600"
+                       data-start="1200" data-end="9400" data-endspeed="600">
+                    {{slide.brand}}
+                  </div>
+
+                  <div class="tp-caption dark_gray_bg sfl medium tp-resizeme" data-x="0" data-y="170" data-speed="600"
+                       data-start="1600" data-end="9400" data-endspeed="600"><i class="icon-check"></i>
+                  </div>
+                  <div class="tp-caption light_gray_bg sfb medium tp-resizeme" data-x="50" data-y="170" data-speed="600"
+                       data-start="1600" data-end="9400" data-endspeed="600">{{slide.text1}}
+                  </div>
+                  <div class="tp-caption dark_gray_bg sfl medium tp-resizeme" data-x="0" data-y="220" data-speed="600"
+                       data-start="1800" data-end="9400" data-endspeed="600"><i class="icon-check"></i>
+                  </div>
+                  <div class="tp-caption light_gray_bg sfb medium tp-resizeme" data-x="50" data-y="220" data-speed="600"
+                       data-start="1800" data-end="9400" data-endspeed="600">{{slide.text2}}
+                  </div>
+                  <div class="tp-caption dark_gray_bg sfl medium tp-resizeme" data-x="0" data-y="270" data-speed="600"
+                       data-start="2000" data-end="9400" data-endspeed="600"><i class="icon-check"></i>
+                  </div>
+                  <div class="tp-caption light_gray_bg sfb medium tp-resizeme" data-x="50" data-y="270" data-speed="600"
+                       data-start="2000" data-end="9400" data-endspeed="600">{{slide.text3}}
+                  </div>
+                </li>
+              </ul>
+              <div class="tp-bannertimer tp-bottom"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ================ -->
+      <!-- slideshow end -->
+
       <br/>
 
       <!-- LEFT COLUMN -->
@@ -69,11 +69,11 @@
         </block>
 
         <block header="'What\'s this model about?'">
-          {{block1.description}}
+          {{car.descriptionBrand}}
         </block>
 
         <block header="'We have it in excellent condition'">
-          {{block2.description}}
+          {{car.descriptionBrand}}
         </block>
 
         <block header="'Nice features'">
@@ -387,16 +387,8 @@
           </div>
         </block>
 
-        <!-- Other cars -->
         <block header="'Other cars that you might like'">
-          <div class="col-md-4" ng-repeat="car in similarcars">
-            <info-image
-              src="car.img"
-              href="'/car-details/' + car.id">
-              <h2 class="sk-car-details__popular-image-title">{{car.brand}}</h2>
-              {{car.description}}
-            </info-image>
-          </div>
+          <cars-grid cars="similarcars"></cars-grid>
         </block>
 
       </div>
