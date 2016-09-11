@@ -13,6 +13,7 @@ angular.module('application').controller('homepageController', function ($scope,
     $scope.getCarByModelOrBrand = function(val) {
        carService.getCarByModelOrBrand(val).then(function(data) {
          console.log(data);
+         $state.go('search', data)
        });
     };
 
