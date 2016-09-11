@@ -14,7 +14,7 @@ angular.module('application').controller('checkoutModalController', function ($u
     $ctrl.submit = function(){
         var userModel = $ctrl.user;
         var url = '/api/notification/order?recipient=' + userModel.email + "&brand=" + userModel.carBrand
-            + "&price=" + userModel.carPrice + "&modelName=" + userModel.carModel;
+            + "&price=" + userModel.carPrice + "&modelname=" + userModel.carModel;
         $http({
             method: 'POST',
             url: url
