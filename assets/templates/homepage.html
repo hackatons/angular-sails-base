@@ -54,7 +54,7 @@
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <div class="input-group sk-search">
-            <input type="text" class="form-control" placeholder="Enter a Car Name"/>
+            <input type="text" class="form-control" ng-model="searchTerm" placeholder="Enter a Car Name"/>
             <span class="input-group-btn">
              <button class="btn input-group-btn  btn-primary" ng-click="getCarByModelOrBrand(searchTerm)" type="button">
                Go!
@@ -63,6 +63,18 @@
           </div><!-- /input-group -->
         </div><!-- /.col-lg-6 -->
       </div><!-- /.row -->
+    </div>
+
+    <br />
+
+    <div class="row">
+      <div class="col-md-4" style="margin-bottom: 10px;" ng-repeat="car in cars.found">
+        <info-image
+          src="car.img"
+          href="'/car-details/' + car.id">
+          <h2 class="sk-home__popular-image-title">{{car.brand}}</h2>
+        </info-image>
+      </div>
     </div>
 
     <hr />

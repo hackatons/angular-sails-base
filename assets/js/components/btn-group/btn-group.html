@@ -3,7 +3,7 @@
         <button class="btn btn-default btn-sm {{option.extraClass}}"
             ng-class="{'btn-primary':option.toggled, 'btn-group__circle':$ctrl.shape==='circle'}"
             ng-style="option.style"
-            ng-click="option.toggled = !option.toggled">
+            ng-click="$ctrl.toggle(option)">
             {{option.name}}
 
             <span ng-if="!option.name && option.toggled" class="glyphicon glyphicon-ok"></span>

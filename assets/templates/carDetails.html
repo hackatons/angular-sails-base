@@ -9,7 +9,11 @@
       <!-- slideshow start -->
       <!-- ================ -->
       <div class="banner">
-        <div class="slideshow">
+        <button ng-click="is360View=!is360View" class="btn btn-white pull-right" style="position: absolute;">
+          <p ng-if="is360View">360</p>
+          <p ng-if="!is360View">2D</p>
+        </button>
+        <div class="slideshow" ng-show="!is360View">
           <div class="slider-banner-container">
             <div class="slider-banner">
               <ul>
@@ -43,12 +47,19 @@
                   <div class="tp-caption light_gray_bg sfb medium tp-resizeme" data-x="50" data-y="270" data-speed="600"
                        data-start="2000" data-end="9400" data-endspeed="600">{{slide.text3}}
                   </div>
+                  <div class="tp-caption dark_gray_bg sfl medium tp-resizeme" data-x="0" data-y="320" data-speed="600"
+                       data-start="2200" data-end="9400" data-endspeed="600"><i class="icon-check"></i>
+                  </div>
+                  <div class="tp-caption light_gray_bg sfb medium tp-resizeme" data-x="50" data-y="320" data-speed="600"
+                       data-start="2200" data-end="9400" data-endspeed="600">{{slide.text4}}
+                  </div>
                 </li>
               </ul>
               <div class="tp-bannertimer tp-bottom"></div>
             </div>
           </div>
         </div>
+        <iframe ng-show="is360View" src="https://www.panono.com/p/jmr7n52eIbDn/embed?autorotate=false" width="100%" height="520" frameborder="0" scrolling="no" allowfullscreen></iframe>
       </div>
       <!-- ================ -->
       <!-- slideshow end -->
@@ -402,28 +413,4 @@
   </div>
 
 
-</div>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
 </div>

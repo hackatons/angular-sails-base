@@ -12,7 +12,7 @@
     var selectedCarId = $stateParams.id;
     $scope.similarcars = [];
     $scope.slides = [];
-
+    $scope.is360View = false;
     init();
 
     /////////////////////////////
@@ -30,7 +30,8 @@
             brand: car.brand,
             text1: "Engine: " + car.engine,
             text2: "Type: " + car.bodyType,
-            text3: "Mileage: " + car.mileage
+            text3: "Mileage: " + car.mileage,
+            text4: car.price + "€"
           });
         }
 
