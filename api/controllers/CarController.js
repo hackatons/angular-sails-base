@@ -9,19 +9,20 @@ module.exports = {
   getBybrandOrModel: function (req, res) {
     var term = req.param('term');
 
-    Car.find({
+    car.find({
         or: [
           { brand: {like:'%'+term+'%'}},
           { model: {like:'%'+term+'%'} }
         ]
       })
       .then(function(cars){
+        console.log('cars:', cars);
         res.json(cars);
       })
       .catch(function (err){
+        console.log('error', error);
         res.json(err);
       });
-    res.json('');
   }
 };
 

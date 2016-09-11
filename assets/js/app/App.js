@@ -1,5 +1,7 @@
+
 var legislatorApp = angular.module('application', ['ngMaterial', 'ui.router' , 'ngSails',
-  'luegg.directives', 'pascalprecht.translate', 'skynda.search']);
+  'luegg.directives', 'pascalprecht.translate', 'skynda.search', 'ui.bootstrap']);
+
 
 legislatorApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider, $translateProvider) {
 
