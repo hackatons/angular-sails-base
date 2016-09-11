@@ -22,7 +22,7 @@ var cssFilesToInject = [
   '/bower_components/sweetalert/dist/sweetalert.css',
 
   'styles/**/*.css',
-  'js/**/components/**/*.css',
+  'js/**/components/**/*.css'
   // '/bower_components/jquery-modal/jquery.modal.min.css'
 ];
 
