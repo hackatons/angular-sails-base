@@ -4,9 +4,12 @@
             ng-class="{'btn-primary':option.toggled, 'btn-group__circle':$ctrl.shape==='circle'}"
             ng-style="option.style"
             ng-click="$ctrl.toggle(option)">
-            {{option.name}}
 
-            <span ng-if="!option.name && option.toggled" class="glyphicon glyphicon-ok"></span>
+            <span ng-hide="option.hideName">
+                {{option.name}}
+            </span>
+
+            <span ng-if="option.hideName && option.toggled" class="glyphicon glyphicon-ok"></span>
         </button>
     </li>
 </ul>

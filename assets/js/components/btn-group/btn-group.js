@@ -26,19 +26,24 @@ var btnGroup = {
         };
 
         function selectAll() {
-            // $
+            for (var i = 0; i < $ctrl.options.length; i++) {
+                var option = $ctrl.options[i];
+                option.toggled = true;
+            }
         }
 
         function deselectAll() {
-            $ctrl.model = [];
             for (var i = 0; i < $ctrl.options.length; i++) {
-                // $ctrl
+                var option = $ctrl.options[i];
+                option.toggled = false;
             }
         }
 
         function setFiltersModel() {
             $ctrl.model = $ctrl.options.filter(function(option) {
-                return !!option.toggled;
+                return option.id !== -1 && !!option.toggled;
+            }).map(function(el) {
+                return el.name;
             });
         }
 

@@ -12,7 +12,7 @@
     var selectedCarId = $stateParams.id;
     $scope.similarcars = [];
     $scope.slides = [];
-
+    $scope.is360View = false;
     init();
 
     /////////////////////////////
