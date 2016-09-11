@@ -34,7 +34,7 @@ angular.module('application').component('skNavbar', {
         templateUrl: '/js/components/sk-navbar/carPriceModal.html',
         controller: function ($scope) {
           $scope.complete = function () {
-            swal('Thank you', 'Your order has been submitted. The offered price is 11 500.00 euros.', 'success');
+            swal('Thank you', '', 'success');
             modalInstance2.close('a');
           }
         }
