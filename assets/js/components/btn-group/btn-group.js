@@ -5,7 +5,8 @@ var btnGroup = {
     // & - callback binding
     bindings: {
         options: '<',
-        shape: '<'
+        shape: '<',
+        model: '='
     },
     templateUrl: '/js/components/btn-group/btn-group.html',
     controller: function() {

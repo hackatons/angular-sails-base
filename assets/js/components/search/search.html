@@ -2,51 +2,71 @@
     <!-- ADVANCED SEARCH TOOLBOX -->
     <section class="search">
         <label>Brand</label>
-        <btn-group options="$ctrl.brands"></btn-group>
+        <btn-group options="$ctrl.brands" model="$ctrl.selectedBrands"></btn-group>
 
         <div class="row">
             <div class="col-md-4">
                 <label>Mileage</label>
-                <range-slider min="0" max="500000" label="'KM'"></range-slider>
+                <range-slider label="'KM'"
+                    min="0" max="500000"
+                    model-min="$ctrl.mileageMin" model-max="$ctrl.mileageMax">                
+                </range-slider>
             </div>
             <div class="col-md-4">
                 <label>Price</label>
-                <range-slider min="1" max="500000" label="'EUR'"></range-slider>
+                <range-slider label="'EUR'" 
+                    min="1" max="500000"
+                    model-min="$ctrl.priceMin" model-max="$ctrl.priceMax">
+                </range-slider>
             </div>
             <div class="col-md-4">
                 <label>Year</label>
-                <range-slider min="1970" max="2016"></range-slider>
+                <range-slider 
+                    min="1970" max="2016"
+                    model-min="$ctrl.yearMin" model-max="$ctrl.yearMax">
+                </range-slider>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-8">
                 <label>Color</label>
-                <btn-group options="$ctrl.colors" shape="'circle'"></btn-group>
+                <btn-group options="$ctrl.colors" model="$ctrl.selectedColors" shape="'circle'">                    
+                </btn-group>
 
                 <label>Features</label>
-                <btn-group options="$ctrl.features"></btn-group>
+                <btn-group options="$ctrl.features" model="$ctrl.selectedFeatures">                    
+                </btn-group>
 
                 <div class="row">
                     <div class="col-md-6">
                         <label>Doors</label>
-                        <btn-group options="$ctrl.doors" shape="'circle'"></btn-group>
+                        <btn-group options="$ctrl.doors" model="$ctrl.selectedDoors" shape="'circle'">                            
+                        </btn-group>
                     </div>
                     <div class="col-md-6">
                         <label>Seats</label>
-                        <btn-group options="$ctrl.seats" shape="'circle'"></btn-group>
+                        <btn-group options="$ctrl.seats" model="$ctrl.selectedSeats" shape="'circle'">                            
+                        </btn-group>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <label>Petrol Consumption (average)</label>
-                <range-slider min="0" max="20" label="'L'"></range-slider>
+                <range-slider label="'L'"
+                    min="0" max="20"
+                    model-min="$ctrl.petrolMin" model-max="$ctrl.petrolMax">
+                </range-slider>
 
                 <label>Horsepower</label>
-                <range-slider min="0" max="500" label="'KW'"></range-slider>
+                <range-slider label="'KW'" 
+                    min="0" max="500"
+                    model-min="$ctrl.horsepowerMin" model-max="$ctrl.horsepowerMax">
+                </range-slider>
 
                 <label>Transmission</label>
-                <btn-group options="$ctrl.transmissions"></btn-group>
+                <btn-group options="$ctrl.transmissions" model="$ctrl.selectedTransmissions">                    
+                </btn-group>
 
                 <div class="text-right">
                     <button class="btn btn-info" ng-click="$ctrl.search()">
