@@ -51,8 +51,7 @@ angular.module('application').controller('homepageController', function ($scope,
           id: car.id,
           title: car.brand,
           src: car.images.split(',')[0],
-          href: '/car-details/' + car.id,
-          description: car.descriptionBrand
+          href: '/car-details/' + car.id
         });
       }
 
@@ -64,8 +63,7 @@ angular.module('application').controller('homepageController', function ($scope,
           id: car.id,
           title: car.brand,
           src: car.images.split(',')[0],
-          href: '/car-details/' + car.id,
-          description: car.descriptionBrand
+          href: '/car-details/' + car.id
         });
       }
     });
