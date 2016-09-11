@@ -120,7 +120,7 @@
           $scope.similarcars.push({
             id: car.id,
             title: car.brand,
-            src: car.images.split(',')[0],
+            src: car.images.split(',')[1],
             href: '/car-details/' + car.id
           });
         }
