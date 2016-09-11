@@ -13,6 +13,7 @@
 
   ul{
     margin: 0px;
+    border-bottom: 0;
   }
   .nav-tab-header{
     color: @localblue;
@@ -38,8 +39,15 @@
     &:first-child{
       border-right: 2px solid  @localblue;
     }
-    border-bottom: 2px solid  @localblue;
+
+    border-bottom: 2px solid  @localblue;    
   }
+
+  a, .tab-content{
+        background: #ffffff !important; 
+        border: 0 !important;
+        
+    }
 
   .nav-tabs > li.active > a:after {
     background-color:transparent;
