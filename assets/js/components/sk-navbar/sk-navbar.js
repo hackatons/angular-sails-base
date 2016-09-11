@@ -36,7 +36,7 @@ angular.module('application').component('skNavbar', {
           $scope.complete = function () {
             swal({
               title: 'Thank you',
-              text: 'Your order has been submitted. The offered price is 11 500.00 euros.',
+              text: '',
               type: 'success',
               confirmButtonColor: '#FBBB68'
             });
