@@ -61,6 +61,10 @@ File Description: Place here your custom CSS styles
   border: none;
   outline: none;
 }
+a ,
+a:hover {
+  color: #019BFF;
+}
 .sk-btn--search{
   background: none;
   min-width: 100px;
