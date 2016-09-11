@@ -99,7 +99,7 @@
       }).error(function () {
         $state.go('error404');
       })
-        .then(getSimilarCars());
+      .then(getSimilarCars());
     }
 
     function getCars(params) {
