@@ -1,19 +1,39 @@
 var search = {
     templateUrl: '/js/components/search/search.html',
     controller: ['$http', '$stateParams', function($http, $stateParams) {
-        var self = this;
+        var $ctrl = this;
 
         this.searchedCars = [];
         this.cars = [];
 
         getCars().then(function(response) {
-            self.cars = response.data;
+            $ctrl.cars = response.data;
         });
 
         this.search = function() {
             // Filter from all cars list.
-            var filteredCars = self.cars.filter(function(car) {
-                return car;
+            var filteredCars = $ctrl.cars.filter(function(car) {
+                
+                // Filter by brand. 
+                // TODO: length haxor included because we are missing some brands
+                if ($ctrl.selectedBrands.length < 19 && $ctrl.selectedBrands.indexOf(car.model) === -1)
+                    return false;
+
+                // Filter by color.
+
+                
+                // Filter by price.
+                if (car.price && (car.price < $ctrl.priceMin || car.price > $ctrl.priceMax))
+                    return false;
+
+                // Filter by mileage.
+                var mileage = car.mileage.replace(',', '');
+                if (mileage && (mileage < $ctrl.mileageMin || mileage > $ctrl.mileageMax))
+                    return false;
+
+
+
+                return true;
             });
 
             // Map car model into image-grid representation.
@@ -24,6 +44,8 @@ var search = {
                     src: car.images.split(',')[0]
                 };
             });
+
+            console.log($ctrl);
         };
 
         this.brands = [
@@ -39,27 +61,27 @@ var search = {
             { id: 8, name: 'Lexus' },
             { id: 9, name: 'Mazda' },
             { id: 10, name: 'Nissan' },
-            { id: 11, name: 'Opel', toggled: true },
+            { id: 11, name: 'Opel'},
             { id: 12, name: 'Peugeot' },
             { id: 13, name: 'Renault' },
             { id: 14, name: 'Seat' },
             { id: 15, name: 'Skoda' },
-            { id: 16, name: 'Subaru', toggled: true },
+            { id: 16, name: 'Subaru'},
             { id: 17, name: 'Volkswagen' },
             { id: 18, name: 'Volvo' }
         ];
 
         this.colors = [
             { id: -1, name: 'All', toggled: true },
-            { id: 0, style: { 'background-color': '#EF1717' } },
-            { id: 1, style: { 'background-color': '#E87846' } },
-            { id: 2, style: { 'background-color': '#DECC44' } },
-            { id: 3, style: { 'background-color': '#91DD59' } },
-            { id: 4, style: { 'background-color': '#3AC99D' } },
-            { id: 5, style: { 'background-color': '#44DE62' } },
-            { id: 6, style: { 'background-color': '#15A6DB' } },
-            { id: 7, style: { 'background-color': '#FFFFFF' } , extraClass: 'btn-inverse' },
-            { id: 8, style: { 'background-color': '#000000' } }
+            { id: 0, name: 'red', style: { 'background-color': '#EF1717' }, toggled: true, hideName: true },
+            { id: 1, name: 'orange', style: { 'background-color': '#E87846' }, toggled: true, hideName: true },
+            { id: 2, name: 'yellow', style: { 'background-color': '#DECC44' }, toggled: true, hideName: true },
+            { id: 3, name: 'green', style: { 'background-color': '#91DD59' }, toggled: true, hideName: true },
+            { id: 4, name: 'green', style: { 'background-color': '#3AC99D' }, toggled: true, hideName: true },
+            { id: 5, name: 'green', style: { 'background-color': '#44DE62' }, toggled: true, hideName: true },
+            { id: 6, name: 'blue', style: { 'background-color': '#15A6DB' }, toggled: true, hideName: true },
+            { id: 7, name: 'white', style: { 'background-color': '#FFFFFF' }, toggled: true, hideName: true , extraClass: 'btn-inverse' },
+            { id: 8, name: 'black', style: { 'background-color': '#000000' }, toggled: true, hideName: true }
         ];
 
         this.features = [
@@ -74,7 +96,7 @@ var search = {
 
         this.transmissions = [
             { id: 0, name: 'Automatic', toggled: true },
-            { id: 1, name: 'Manual' }
+            { id: 1, name: 'Manual', toggled: true }
         ];
 
         this.doors = [
