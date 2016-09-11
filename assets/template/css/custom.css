@@ -332,3 +332,17 @@ Checkbox
   background: #fff;
   cursor: pointer;
 }
+
+button .confirm {
+  background: red !important;
+}
+
+.haha-button-01 {
+  background-color: #FFF;
+  color: #5A5B5C !important;
+  border-color: #E8E5E5;
+}
+
+.haha-button-01:hover {
+  color: whitesmoke !important;
+}

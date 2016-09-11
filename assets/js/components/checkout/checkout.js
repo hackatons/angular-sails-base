@@ -51,7 +51,12 @@ angular.module('application').component('checkout', {
                 $scope.successMessage = response;
 
                 if($scope.successMessage == "success"){
-                    swal("Good job!", "You have bought an excellent car!", "success");
+                    swal({
+                      title: "Good job!",
+                      text: "You have bought an excellent car!",
+                      type: "success",
+                      confirmButtonColor: "#019BFF"
+                    });
                 }
 
             }, function () {
