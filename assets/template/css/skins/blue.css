@@ -252,7 +252,7 @@ ul.pagination li.active a,
 .nav-pills > .active > a > .badge {
 	color: #2c5fb3;
 	background-color: #fff;
-	border-color: #2c5fb3;	
+	border-color: #2c5fb3;
 }
 /* Collapse
 ---------------------------------- */
@@ -301,11 +301,11 @@ a.overlay i {
 	background-color: transparent;
 }
 
-.main-navigation .navbar-nav > .open > a, 
-.main-navigation .navbar-nav > .open > a:hover, 
-.main-navigation .navbar-nav > .open > a:focus { 
-	color: #666666; 
-	background-color: #fafafa; 
+.main-navigation .navbar-nav > .open > a,
+.main-navigation .navbar-nav > .open > a:hover,
+.main-navigation .navbar-nav > .open > a:focus {
+	color: #666666;
+	background-color: #fafafa;
 }
 
 /* second level menu items on focus/hover and when opened */
@@ -327,7 +327,7 @@ a.overlay i {
 #offcanvas .nav .open > a,
 #offcanvas .nav .open > a:hover,
 #offcanvas .nav .open > a:focus,
-#offcanvas .nav > li > a:hover, 
+#offcanvas .nav > li > a:hover,
 #offcanvas .nav > li > a:focus,
 #offcanvas .navbar-nav > li.active > a {
 	color: #3d78d8;
@@ -346,8 +346,8 @@ a.overlay i {
 .navbar-default .navbar-nav > .active.dropdown > a:before {
 	color: #3d78d8;
 }
-.navbar-default .navbar-nav > .dropdown.open > a:before { 
-	color: #e5e5e5; 
+.navbar-default .navbar-nav > .dropdown.open > a:before {
+	color: #e5e5e5;
 }
 .dropdown .dropdown.open>a:before,
 .transparent.header:not(.dark) .dropdown .dropdown.open>a:before {
@@ -365,13 +365,13 @@ a.overlay i {
 	background-color: #3d78d8;
 }
 @media (max-width:767px) {
-	.navbar-default .navbar-nav .open .dropdown-menu > .active > a, 
-	.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, 
-	.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus { 
-		color: #3d78d8; 
-		background-color: transparent; 
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+		color: #3d78d8;
+		background-color: transparent;
 	}
-	
+
 	/* first level items hover and focus states */
 	.navbar-default .navbar-nav > li > a:hover,
 	.navbar-default .navbar-nav > li > a:focus,
@@ -380,7 +380,7 @@ a.overlay i {
 		color: #3d78d8;
 		background-color: #fff;
 	}
-	
+
 	/* second level items on hover/focus */
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -414,7 +414,7 @@ a.overlay i {
 .box-style-1:not(.team-member):hover i {
 	color: #3d78d8;
 }
-.box-style-1.default-bg:hover i, 
+.box-style-1.default-bg:hover i,
 .box-style-1.dark-bg:hover i {
 	color: inherit;
 }

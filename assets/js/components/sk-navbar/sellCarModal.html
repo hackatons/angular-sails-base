@@ -10,6 +10,11 @@
     border-radius: 3px;
   }
 
+  .btn-checkout-modal:hover {
+    background-color: #FDA027;
+    color: #FDA027;
+  }
+
   .modal-content {
     border-radius: 15px !important;
     border-color: #FBBB68;
@@ -25,8 +30,8 @@
   Sell Your Car
 </div>
 
-<div class="container col-md-12">
-  <div class="msgcontainer">
+
+
     <p style="text-align: center;">
       <br>
       With Skynda you can sell your car <b>online quickly</b> & <b>easily.</b><br><br>
@@ -36,9 +41,8 @@
       <br><br>
       <b>That’s how simple it is.</b>
     </p>
-  </div>
 
-  <form role="form" name="userForm" ng-submit="complete();"
+  <form style="margin: 0;" role="form" name="userForm" ng-submit="complete();"
         class="form-horizontal ng-pristine ng-invalid ng-invalid-required ng-valid-email ng-valid-minlength ng-valid-maxlength ng-invalid-min ng-valid-max ng-invalid-pattern">
 
     <div layout-gt-xs="row" class="layout-gt-xs-row">
@@ -72,6 +76,3 @@
 
   </form>
 
-</div>
-<div class="modal-footer">
-</div>
