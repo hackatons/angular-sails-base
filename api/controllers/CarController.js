@@ -16,12 +16,13 @@ module.exports = {
         ]
       })
       .then(function(cars){
-        res.json(cars);
+        consol.log(cars);
+        res.json('cars:', cars);
       })
       .catch(function (err){
+        consol.log('error', error);
         res.json(err);
       });
-    res.json('');
   }
 };
 
