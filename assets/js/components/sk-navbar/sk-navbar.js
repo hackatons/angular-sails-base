@@ -7,19 +7,17 @@ angular.module('application').component('skNavbar', {
   controller: function ($scope, $uibModal) {
 
     $scope.sellCar = function () {
-      console.log("TTEEEEE");
-
       var modalInstance = $uibModal.open({
         animation: true,
         ariaLabelledBy: 'modal-title',
         ariaDescribedBy: 'modal-body',
-        templateUrl: '/js/components/sk-navbar/sellCarModal.html'
-        //    scope: $scope // <-- I added thise,
-       /* resolve: {
-          carData: function () {
-            return carData;
+        templateUrl: '/js/components/sk-navbar/sellCarModal.html',
+        controller: function ($scope) {
+          $scope.complete = function () {
+            swal('Thank you', 'Your order has been submitted. The offered price is 5699 euros.', 'success');
+            modalInstance.close('a');
           }
-        }*/
+        }
       });
 
       modalInstance.result.then(function (response) {

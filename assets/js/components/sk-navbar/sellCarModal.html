@@ -1,70 +1,77 @@
-
 <style>
   /*less #95989A*/
   .checkout-modal-header {
-    color:  #FBBB68;
+    color: #FBBB68;
     padding: 10px;
   }
 
-  .btn-checkout-modal{
-    background-color:#FBBB68;
+  .btn-checkout-modal {
+    background-color: #FBBB68;
     border-radius: 3px;
   }
 
-  .modal-content{
+  .modal-content {
     border-radius: 15px !important;
     border-color: #FBBB68;
   }
-  .msgcontainer{
+
+  .msgcontainer {
     color: #95989A;
   }
 
 </style>
 
-            <div class="checkout-modal-header">
-                    Sell Your Car
-            </div>
+<div class="checkout-modal-header">
+  Sell Your Car
+</div>
 
-                <div class="container col-md-12">
-                <div class="msgcontainer">
-                  <p style="text-align: center;">
-                    <br>
-                    With Skynda you can sell your car <b>online quickly</b> & <b>easily.</b>
-                    Enter your cars <b>VIN number</b> and we instantly provide you with a quote.
-                    If you like our offer, confirm it & <b>specify the location where we can pick it up.</b>
-                    After that you will receive the <b>payment for your car.</b>
-<br><br>
-                    <b>That’s how simple it is.</b>
-                  </p>
-                  </div>
+<div class="container col-md-12">
+  <div class="msgcontainer">
+    <p style="text-align: center;">
+      <br>
+      With Skynda you can sell your car <b>online quickly</b> & <b>easily.</b>
+      Enter your cars <b>VIN number</b> and we instantly provide you with a quote.
+      If you like our offer, confirm it & <b>specify the location where we can pick it up.</b>
+      After that you will receive the <b>payment for your car.</b>
+      <br><br>
+      <b>That’s how simple it is.</b>
+    </p>
+  </div>
 
-                    <form role="form" name="userForm" ng-submit="$ctrl.submit()" class="form-horizontal ng-pristine ng-invalid ng-invalid-required ng-valid-email ng-valid-minlength ng-valid-maxlength ng-invalid-min ng-valid-max ng-invalid-pattern">
+  <form role="form" name="userForm" ng-submit="complete();"
+        class="form-horizontal ng-pristine ng-invalid ng-invalid-required ng-valid-email ng-valid-minlength ng-valid-maxlength ng-invalid-min ng-valid-max ng-invalid-pattern">
 
-                        <div layout-gt-xs="row" class="layout-gt-xs-row">
-                            <md-input-container class="md-block md-input-has-value col-md-12">
-                                <label for="input_pickup_address">Pick-up Address*</label>
-                                <input ng-model="$ctrl.user.pickupaddress" class="ng-pristine ng-valid md-input ng-not-empty ng-touched" id="input_pickup_address" aria-invalid="false"><div class="md-errors-spacer"></div>
-                            </md-input-container>
-                        </div>
+    <div layout-gt-xs="row" class="layout-gt-xs-row">
+      <md-input-container class="md-block md-input-has-value col-md-12">
+        <label for="input_pickup_address">Pick-up Address*</label>
+        <input ng-model="$ctrl.user.pickupaddress" class="ng-pristine ng-valid md-input ng-not-empty ng-touched"
+               id="input_pickup_address" aria-invalid="false">
+        <div class="md-errors-spacer"></div>
+      </md-input-container>
+    </div>
 
-                        <div layout-gt-xs="row" class="layout-gt-xs-row">
-                            <md-input-container class="md-block md-input-has-value col-md-6">
-                                <label for="input_your_name">Your Name*</label>
-                                <input ng-model="$ctrl.user.deliverydate" class="ng-pristine ng-valid md-input ng-not-empty ng-touched" id="input_your_name" aria-invalid="false"><div class="md-errors-spacer"></div>
-                                <!--<input class="md-datepicker-input md-input" aria-haspopup="true" ng-focus="ctrl.setFocused(true)" ng-blur="ctrl.setFocused(false)" id="input_delivery_date" size="3">-->
-                            </md-input-container>
-                            <md-input-container class="md-block md-input-has-value col-md-6">
-                                <label for="input_email">Your E-mail*</label>
-                                <input ng-model="$ctrl.user.email" class="ng-pristine ng-valid md-input ng-not-empty ng-touched" id="input_email" aria-invalid="false"><div class="md-errors-spacer"></div>
-                            </md-input-container>
-                        </div>
+    <div layout-gt-xs="row" class="layout-gt-xs-row">
+      <md-input-container class="md-block md-input-has-value col-md-6">
+        <label for="input_your_name">Your Name*</label>
+        <input ng-model="$ctrl.user.deliverydate" class="ng-pristine ng-valid md-input ng-not-empty ng-touched"
+               id="input_your_name" aria-invalid="false">
+        <div class="md-errors-spacer"></div>
+        <!--<input class="md-datepicker-input md-input" aria-haspopup="true" ng-focus="ctrl.setFocused(true)" ng-blur="ctrl.setFocused(false)" id="input_delivery_date" size="3">-->
+      </md-input-container>
+      <md-input-container class="md-block md-input-has-value col-md-6">
+        <label for="input_email">Your E-mail*</label>
+        <input ng-model="$ctrl.user.email" class="ng-pristine ng-valid md-input ng-not-empty ng-touched"
+               id="input_email" aria-invalid="false">
+        <div class="md-errors-spacer"></div>
+      </md-input-container>
+    </div>
 
-                        <div class="modal-footer">
-                            <input class="btn btn-default btn-primary btn-checkout-modal" type="submit" id="submit" value="Send" />
-                        </div>
+    <div class="modal-footer">
+      <input class="btn btn-default btn-primary btn-checkout-modal" type="submit" id="submit" value="Send"/>
+    </div>
 
-                    </form>
+  </form>
 
-            </div>
-            <div class="modal-footer">
-            </div>
+</div>
+<div class="modal-footer">
+</div>
