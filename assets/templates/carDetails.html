@@ -9,9 +9,9 @@
       <!-- slideshow start -->
       <!-- ================ -->
       <div class="banner">
-        <button ng-click="is360View=!is360View" class="btn btn-white pull-right" style="position: absolute;">
-          <p ng-if="is360View">360</p>
-          <p ng-if="!is360View">2D</p>
+        <button ng-click="is360View=!is360View" type="button" class="btn btn-default" aria-label="Left Align" style="position: absolute; z-index: 100">
+          <span ng-if="!is360View" class="glyphicon glyphicon-move" aria-hidden="true"></span>
+          <span ng-if="is360View" class="glyphicon glyphicon-picture" aria-hidden="true"></span>
         </button>
         <div class="slideshow" ng-show="!is360View">
           <div class="slider-banner-container">
