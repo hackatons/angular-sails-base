@@ -53,6 +53,14 @@ File Description: Place here your custom CSS styles
   background-color: #fff;
   color: #019BFF;
 }
+.btn-link,
+.btn-link:hover,
+.btn-link:hover:focus,
+.btn-link:focus{
+  color: #019BFF;
+  border: none;
+  outline: none;
+}
 .sk-btn--search{
   background: none;
   min-width: 100px;
