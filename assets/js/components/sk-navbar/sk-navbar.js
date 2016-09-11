@@ -3,5 +3,10 @@
  */
 
 angular.module('application').component('skNavbar', {
-  templateUrl: '/js/components/sk-navbar/sk-navbar.html'
+  templateUrl: '/js/components/sk-navbar/sk-navbar.html',
+  controller: function ($scope) {
+    $scope.sellCar = function () {
+
+    }
+  }
 });

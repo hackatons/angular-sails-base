@@ -1,4 +1,7 @@
-<div class="container">
+<div>
+  <sk-navbar></sk-navbar>
+
+  <div class="container">
     <!-- ADVANCED SEARCH TOOLBOX -->
     <section class="search">
         <label>Brand</label>
@@ -28,6 +31,14 @@
             </div>
         </div>
 
+      <div class="row">
+        <div class="col-md-4">
+          <label>Mileage</label>
+          <range-slider min="0" max="500000" label="'KM'"></range-slider>
+        </div>
+        <div class="col-md-4">
+          <label>Price</label>
+          <range-slider min="1" max="500000" label="'EUR'"></range-slider>
         <div class="row">
             <div class="col-md-8">
                 <label>Color</label>
@@ -68,19 +79,21 @@
                 <btn-group options="$ctrl.transmissions" model="$ctrl.selectedTransmissions">                    
                 </btn-group>
 
-                <div class="text-right">
-                    <button class="btn btn-info" ng-click="$ctrl.search()">
-                        <span class="glyphicon glyphicon-search"></span>
-                        Search
-                    </button>
-                </div>
-            </div>
+          <div class="text-right">
+            <button class="btn btn-info" ng-click="$ctrl.search()">
+              <span class="glyphicon glyphicon-search"></span>
+              Search
+            </button>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- SEARCH RESULTS -->
     <label>
-        {{$ctrl.searchedCars.length}} {{$ctrl.searchedCars.length === 1 ? 'beauty' : 'beauties'}} found
+      {{$ctrl.searchedCars.length}} {{$ctrl.searchedCars.length === 1 ? 'beauty' : 'beauties'}} found
     </label>
     <image-grid values="$ctrl.searchedCars"></image-grid>
+  </div>
+
 </div>
