@@ -3,8 +3,6 @@ var search = {
     controller: ['$http', '$stateParams', function($http, $stateParams) {
         var self = this;
 
-        console.log($stateParams);
-
         this.searchedCars = [];
         this.cars = [];       
 
