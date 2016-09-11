@@ -22,17 +22,19 @@
         };
 
         return $http.get(carEndpoint+'/by-brand-or-model', config);
-      }
+      };
 
       this.fillData = function (source, dest, take) {
         dest.length = 0;
         for (var j = 0; j < source.length && j < take; j++) {
           var car = source[j];
           var images = car.images.split(',');
+          // var chosenImage = Math.floor(Math.random() * images.length);
+          var chosenImage = 1;
           dest.push({
             id: car.id,
             title: car.brand,
-            src: images[1],
+            src: images[chosenImage],
             href: '/car-details/' + car.id
           });
         }

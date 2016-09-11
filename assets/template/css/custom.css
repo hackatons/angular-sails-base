@@ -53,6 +53,21 @@ File Description: Place here your custom CSS styles
   background-color: #fff;
   color: #019BFF;
 }
+.banner{
+  position: relative;
+}
+.btn--360{
+  min-width: 0;
+  margin-left: 10px;
+  bottom: 0;
+  border: none !important;
+}
+.btn--360 img{
+  width: 24px;
+  height: 24px;
+  display: inline;
+  margin-right: 6px;
+}
 .btn-link,
 .btn-link:hover,
 .btn-link:hover:focus,
@@ -103,11 +118,11 @@ a:hover {
   color: #5A5B5C;
 }
 .navbar-default .navbar-nav > .sk-menu--sell >a{
-  color: #019BFF;
+  color: #FBBB68;
 }
 
 .navbar-default .navbar-nav > .sk-menu--buy > a{
-  color: #FBBB68;
+  color: #019BFF;
 }
 
 .sk-logo img{
@@ -317,4 +332,3 @@ Checkbox
   background: #fff;
   cursor: pointer;
 }
-
