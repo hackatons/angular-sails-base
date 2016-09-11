@@ -1,13 +1,70 @@
+angular.module('application').controller('checkoutModalController', function ($uibModalInstance, $http, carData) {
+    var $ctrl = this;
+    $ctrl.header = 'One More Step';
+    $ctrl.user = {
+        carBrand: carData.brand,
+        carPrice: carData.price,
+        carModel: carData.model
+    };
+
+    $ctrl.cancel = function () {
+        $uibModalInstance.dismiss('cancel');
+    };
+
+    $ctrl.submit = function(){
+        var userModel = $ctrl.user;
+        var url = '/api/notification/order?recipient=' + userModel.email + "&brand=" + userModel.carBrand
+            + "&price=" + userModel.carPrice + "&modelName=" + userModel.carModel;
+        $http({
+            method: 'POST',
+            url: url
+            }).then(function successFullCallback() {
+                $uibModalInstance.close("success1");
+            }, function errorCallback(response) {
+                $uibModalInstance.close("success2");
+            }
+            );
+    }
+    <!--api/notification/order?recipient=ing.edwardyrc@gmail.com&brand=mazda&price=2700&modelname=sorento-->
+});
 
 angular.module('application').component('checkout', {
     templateUrl: '/js/components/checkout/checkout.html',
-    controller: function ($scope, $element, $attrs) {
+    controller: function ($scope, $element, $attrs, $uibModal) {
 
         $scope.changeCheckoutTab = function() {
             $scope.leaseTab = !$scope.leaseTab;
         };
 
+        var carData = {
+            brand: 'mazda',
+            price: 2700,
+            model: 'sorento'
+        };
 
+        $scope.openCheckoutModal = function(){
+            var modalInstance = $uibModal.open({
+                animation: true,
+                ariaLabelledBy: 'modal-title',
+                ariaDescribedBy: 'modal-body',
+                templateUrl: '/js/components/checkout/modal/checkoutModal.html',
+                controller: 'checkoutModalController',
+                controllerAs: '$ctrl',
+            //    scope: $scope // <-- I added thise,
+                resolve: {
+                    carData: function () {
+                        return carData;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function (response) {
+                $scope.successMessage = response;
+            }, function () {
+
+            });
+
+        }
 
         /*
         * jQuery used because was most familiar

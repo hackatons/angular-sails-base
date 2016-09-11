@@ -116,9 +116,9 @@
       </li>
     </div>
     <div class="btn-checkout-container" ng-show="!leaseTab">
-      <a href="page-services.html" class="btn btn-default">Buy Now</a>
+      <a ng-click="openCheckoutModal()" class="btn btn-default">Buy Now</a>
     </div>
     <div class="btn-checkout-container" ng-show="leaseTab">
-      <a href="page-services.html" class="btn btn-default">Lease</a>
+      <a ng-click="openCheckoutModal()" class="btn btn-default">Lease</a>
     </div>
   </div>
