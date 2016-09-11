@@ -6,19 +6,23 @@ var rangeSlider = {
     bindings: {
         min: '<',
         max: '<',
-        label: '<'
+        label: '<',
+        modelMin: '=',
+        modelMax: '='
     },
     templateUrl: '/js/components/range-slider/range-slider.html',
     controller: function() {
-        var self = this;
+        var $ctrl = this;
         this.options = {            
-            floor: self.min,
-            ceil: self.max,
+            floor: $ctrl.min,
+            ceil: $ctrl.max,
             translate: function(value) {
-                if (!self.label || !value) return value;
-                return value + " " + self.label;
+                if (!$ctrl.label || !value) return value;
+                return value + " " + $ctrl.label;
             }
         };
+        if (!$ctrl.modelMin) $ctrl.modelMin = $ctrl.min;
+        if (!$ctrl.modelMax) $ctrl.modelMax = $ctrl.max;
     }
 };
 

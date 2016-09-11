@@ -19,6 +19,7 @@ var cssFilesToInject = [
   '/bower_components/font-awesome/css/font-awesome.min.css',
   '/bower_components/angular-material/angular-material.min.css',
   '/bower_components/angularjs-slider/dist/rzslider.min.css',
+  '/bower_components/sweetalert/dist/sweetalert.css',
 
   'styles/**/*.css',
   'js/**/components/**/*.css',
@@ -57,6 +58,7 @@ var jsFilesToInject = [
   '/bower_components/jquery-modal/jquery.modal.min.js',
    //angular sails
   '/bower_components/angular-sails/dist/angular-sails.min.js',
+  '/bower_components/sweetalert/dist/sweetalert.min.js',
 
   //angularjs services
   '/js/services/crud.js',

@@ -30,8 +30,8 @@ File Description: Place here your custom CSS styles
 .btn-default:focus,
 .btn-default:active{
   background-color: #FFF;
-  color: #95989A !important;
-  border-color: #95989A;
+  color: #5A5B5C !important;
+  border-color: #E8E5E5;
 }
 .btn-default:hover{
   background-color: #019BFF;
@@ -42,23 +42,33 @@ File Description: Place here your custom CSS styles
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:hover{
- background-color: #019BFF;
   color: #ffffff !important;
   background-color: #019BFF;
+}
+.btn-primary.btn-inverse{
+  color: #95989A !important;
 }
 /* info button*/
 .btn-info{
   background-color: #fff;
   color: #019BFF;
 }
-.btn-info span{
+.sk-btn--search{
+  background: none;
+  min-width: 100px;
+  line-height: 18px;
+}
+.sk-btn--search span{
   margin-right: 6px;
   margin-left: 6px;
+  font-size: 18px;
+  vertical-align: text-bottom;
 }
 /* filter */
 .btn-group__circle.btn-sm {
   border-radius: 50%;
-  width: 36px;
+  width: 38px;
+  height: 38px;
   min-width: 0;
   padding: 0;
 }
