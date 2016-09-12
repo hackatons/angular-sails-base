@@ -15,7 +15,7 @@
           headers : {'Accept' : 'application/json'}
         };
 
-        return $http.get(notificationEndpoint, config);
+        return null;
       }
     }
   );
